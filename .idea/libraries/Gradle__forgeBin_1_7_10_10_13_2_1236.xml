@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: forgeBin-1.7.10-10.13.2.1236">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.2.1236/forgeBin-1.7.10-10.13.2.1236.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/build/tmp/recompSrc" />
+      <root url="file://$PROJECT_DIR$/build/tmp/recompSrc" />
+      <root url="file://$PROJECT_DIR$/build/tmp/recompSrc" />
+    </SOURCES>
+  </library>
+</component>

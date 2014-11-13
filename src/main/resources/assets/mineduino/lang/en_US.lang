@@ -1,0 +1,4 @@
+tile.digitalIN.name=Digital IN
+tile.digitalOUT.name=Digital OUT
+itemGroup.tabArduino=Arduino
+mineduino.selectpin.digital=Select Arduino digital pin (2 - 50)

@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mineduino",
+  "name": "MineDuino",
+  "description": "Programme your Arduino using Minecraft",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Filip Prochazka"],
+  "credits": "Filip Prochazka (www.jacktech.cz)",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
