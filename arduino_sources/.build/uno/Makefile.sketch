@@ -3,17 +3,12 @@
 
 
 
-.build/uno/src/sketch.cpp : src/sketch.ino
-	@mkdir -p .build/uno/src
-	@echo [93msrc/sketch.ino[0m
-	@/usr/local/bin/ino preproc  -o $@ $^
-
 .build/uno/src/mineduino.cpp : src/mineduino.ino
 	@mkdir -p .build/uno/src
 	@echo [93msrc/mineduino.ino[0m
 	@/usr/local/bin/ino preproc  -o $@ $^
 
 
-all : .build/uno/src/sketch.cpp .build/uno/src/mineduino.cpp
+all : .build/uno/src/mineduino.cpp
 	@true
 
