@@ -16,6 +16,7 @@ void setupMega2560();
 //#include <SerialCommand.h>
 
 SerialCommand SCmd;
+long lastTime = 0;
 
 void setup(){
   Serial.begin(9600); 
@@ -28,9 +29,11 @@ void setup(){
 }
 
 void loop(){
-  printUno();
+  if(millis() - lastTime > 500){
+    lastTime = millis();
+    printUno();
+  }
   SCmd.readSerial(); 
-  delay(500);
 }
 
 void printUno(){

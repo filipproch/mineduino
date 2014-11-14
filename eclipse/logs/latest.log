@@ -1,13 +1,13 @@
-[16:31:42] [main/INFO]: Setting user: Player331
-[16:31:44] [Client thread/INFO]: LWJGL Version: 2.9.1
-[16:31:45] [Client thread/ERROR]: Couldn't initialize twitch stream
-[16:31:51] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MineDuino
-[16:31:53] [Sound Library Loader/INFO]: Sound engine started
-[16:31:54] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[16:31:54] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[16:31:54] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MineDuino
-[16:31:54] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[16:31:54] [Client thread/ERROR]: Using missing texture, unable to load mineduino:textures/blocks/analogOut.png
+[10:04:41] [main/INFO]: Setting user: Player507
+[10:04:43] [Client thread/INFO]: LWJGL Version: 2.9.1
+[10:04:44] [Client thread/ERROR]: Couldn't initialize twitch stream
+[10:04:51] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MineDuino
+[10:04:52] [Sound Library Loader/INFO]: Sound engine started
+[10:04:54] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[10:04:54] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[10:04:54] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MineDuino
+[10:04:54] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[10:04:54] [Client thread/ERROR]: Using missing texture, unable to load mineduino:textures/blocks/analogOut.png
 java.io.FileNotFoundException: mineduino:textures/blocks/analogOut.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -30,24 +30,50 @@ java.io.FileNotFoundException: mineduino:textures/blocks/analogOut.png
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78) [start/:?]
 	at GradleStart.main(GradleStart.java:45) [start/:?]
-[16:31:55] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[16:31:56] [Sound Library Loader/INFO]: Sound engine started
-[16:31:58] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[16:31:58] [Server thread/INFO]: Generating keypair
-[16:31:59] [Server thread/INFO]: Preparing start region for level 0
-[16:32:00] [Server thread/INFO]: Preparing spawn area: 48%
-[16:32:01] [Server thread/INFO]: Changing view distance to 12, from 10
-[16:32:02] [Server thread/INFO]: Player331[local:E:b1b82e6f] logged in with entity id 146 at (-284.9923462040144, 2.0, 475.6275542596224)
-[16:32:02] [Server thread/INFO]: Player331 joined the game
-[16:32:06] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 3356ms behind, skipping 67 tick(s)
-[16:32:27] [Server thread/INFO]: Saving and pausing game...
-[16:32:27] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/Overworld
-[16:32:27] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/Nether
-[16:32:27] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/The End
-[16:32:28] [Server thread/INFO]: Stopping server
-[16:32:28] [Server thread/INFO]: Saving players
-[16:32:28] [Server thread/INFO]: Saving worlds
-[16:32:28] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/Overworld
-[16:32:28] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/Nether
-[16:32:28] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/The End
-[16:32:29] [Client thread/INFO]: Stopping!
+[10:04:55] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[10:04:56] [Sound Library Loader/INFO]: Sound engine started
+[10:05:03] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[10:05:03] [Server thread/INFO]: Generating keypair
+[10:05:03] [Server thread/INFO]: Preparing start region for level 0
+[10:05:05] [Server thread/INFO]: Preparing spawn area: 84%
+[10:05:05] [Server thread/INFO]: Changing view distance to 12, from 10
+[10:05:06] [Server thread/INFO]: Player507[local:E:537d738b] logged in with entity id 156 at (-283.89093853315575, 5.0, 467.45341076892976)
+[10:05:06] [Server thread/INFO]: Player507 joined the game
+[10:05:08] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2419ms behind, skipping 48 tick(s)
+[10:05:33] [Server thread/INFO]: Saving and pausing game...
+[10:05:34] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/Overworld
+[10:05:34] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/Nether
+[10:05:34] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/The End
+[10:05:40] [Server thread/INFO]: Player507 has just earned the achievement [Taking Inventory]
+[10:05:41] [Client thread/INFO]: [CHAT] Player507 has just earned the achievement [Taking Inventory]
+[10:05:56] [Server thread/INFO]: Saving and pausing game...
+[10:05:56] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/Overworld
+[10:05:56] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/Nether
+[10:05:56] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/The End
+[10:06:14] [Server thread/INFO]: Saving and pausing game...
+[10:06:14] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/Overworld
+[10:06:14] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/Nether
+[10:06:14] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/The End
+[10:07:41] [Server thread/INFO]: Saving and pausing game...
+[10:07:41] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/Overworld
+[10:07:41] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/Nether
+[10:07:41] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/The End
+[10:09:40] [Server thread/INFO]: Saving and pausing game...
+[10:09:40] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/Overworld
+[10:09:40] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/Nether
+[10:09:40] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/The End
+[10:14:20] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 18041ms behind, skipping 360 tick(s)
+[10:15:07] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 36351ms behind, skipping 727 tick(s)
+[10:15:09] [Client thread/INFO]: Stopping!
+[10:15:10] [Server thread/INFO]: Stopping server
+[10:15:10] [Server thread/INFO]: Saving players
+[10:15:10] [Server thread/INFO]: Saving worlds
+[10:15:10] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/Overworld
+[10:15:10] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/Nether
+[10:15:10] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/The End
+[10:15:11] [Client Shutdown Thread/INFO]: Stopping server
+[10:15:11] [Client Shutdown Thread/INFO]: Saving players
+[10:15:11] [Client Shutdown Thread/INFO]: Saving worlds
+[10:15:11] [Client Shutdown Thread/INFO]: Saving chunks for level 'MineDuino - test'/Overworld
+[10:15:11] [Client Shutdown Thread/INFO]: Saving chunks for level 'MineDuino - test'/Nether
+[10:15:11] [Client Shutdown Thread/INFO]: Saving chunks for level 'MineDuino - test'/The End
