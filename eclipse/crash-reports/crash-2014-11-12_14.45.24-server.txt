@@ -6,7 +6,7 @@ Description: Exception ticking world
 
 java.lang.NullPointerException: Exception ticking world
 	at cz.jacktech.mineduino.serialiface.SerialManager.getPinStatus(SerialManager.java:100)
-	at cz.jacktech.mineduino.blocks.DigitalIn.updateTick(DigitalIn.java:47)
+	at cz.jacktech.mineduino.blocks.input.DigitalIn.updateTick(DigitalIn.java:47)
 	at net.minecraft.world.WorldServer.func_147456_g(WorldServer.java:408)
 	at net.minecraft.world.WorldServer.tick(WorldServer.java:191)
 	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:692)
@@ -22,7 +22,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 -- Head --
 Stacktrace:
 	at cz.jacktech.mineduino.serialiface.SerialManager.getPinStatus(SerialManager.java:100)
-	at cz.jacktech.mineduino.blocks.DigitalIn.updateTick(DigitalIn.java:47)
+	at cz.jacktech.mineduino.blocks.input.DigitalIn.updateTick(DigitalIn.java:47)
 	at net.minecraft.world.WorldServer.func_147456_g(WorldServer.java:408)
 	at net.minecraft.world.WorldServer.tick(WorldServer.java:191)
 

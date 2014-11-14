@@ -1,36 +1,74 @@
 #include <Arduino.h>
-#include <SoftwareSerial.h> 
-#include <SerialCommand.h>
+#include <OneWire.h>
+#include <DallasTemperature.h>
 void setup();
 void loop();
+void serialEvent();
+void readCommand();
+String nextSegmentString();
+int nextSegmentInt();
 void printUno();
 void setupInput();
 void setupOutput();
+void setupDallasTemp();
 void writeAnalog();
 void updatePinHigh();
 void updatePinLow();
 void setupUno();
 void setupMega2560();
 #line 1 "src/mineduino.ino"
-//#include <SoftwareSerial.h> 
-//#include <SerialCommand.h>
+//#include <OneWire.h>
+//#include <DallasTemperature.h>
 
-SerialCommand SCmd;
+OneWire oneWire = null;//(8)
+DallasTemperature temps = null;//(&oneWire)
+
+String currentCommand = "";
+boolean commandReceived = false;
 
 void setup(){
-  Serial.begin(9600); 
-  SCmd.addCommand("changeHigh",updatePinHigh);
-  SCmd.addCommand("changeLow",updatePinLow);
-  SCmd.addCommand("writeAna",writeAnalog);
-  SCmd.addCommand("setupOutput",setupOutput);
-  SCmd.addCommand("setupInput",setupInput);
+  Serial.begin(9600);
+  currentCommand.reserve(100);
+
   setupUno();
 }
 
 void loop(){
   printUno();
-  SCmd.readSerial(); 
   delay(500);
+}
+
+void serialEvent(){
+  while(Serial.available()){
+    char inChar = (char) Serial.read();
+    currentCommand += inChar;
+    if(inChar == '\n'){
+      commandReceived = true;
+      currentCommand = currentCommand.substring(1);
+      readCommand();
+    }
+  }
+}
+
+void readCommand(){
+  if(commandReceived){
+    boolean used = true;
+    String line = nextSegmentString();
+
+    commandReceived = false;
+    currentCommand = "";
+  }
+}
+
+String nextSegmentString(){
+  int delimiterIndex = currentCommand.indexOf(CMD_DELIMITER);
+  String line = currentCommand.substring(0, delimiterIndex);
+  currentCommand = currentCommand.substring(delimiterIndex+1);
+  return line;
+}
+
+int nextSegmentInt(){
+  return nextSegmentString().toInt();
 }
 
 void printUno(){
@@ -45,28 +83,34 @@ void printUno(){
 }
 
 void setupInput(){
-  int pinNumber = atoi(SCmd.next());
+  int pinNumber = nextSegmentInt();
   pinMode(pinNumber, INPUT);
 }
 
 void setupOutput(){
-  int pinNumber = atoi(SCmd.next());
+  int pinNumber = nextSegmentInt();
   pinMode(pinNumber, OUTPUT);
 }
 
+void setupDallasTemp(){
+  int pinNumber = nextSegmentInt();
+  oneWire = new OneWire(pinNumber);
+  temps = new DallasTemperature(&oneWire);
+}
+
 void writeAnalog(){
-  int pinNumber = atoi(SCmd.next());
-  int fadeValue = atoi(SCmd.next());
+  int pinNumber = nextSegmentInt();
+  int fadeValue = nextSegmentInt();
   analogWrite(pinNumber, fadeValue);  
 }
 
 void updatePinHigh(){
-  int pinNumber = atoi(SCmd.next());
+  int pinNumber = nextSegmentInt();
   digitalWrite(pinNumber, HIGH);
 }
 
 void updatePinLow(){
-  int pinNumber = atoi(SCmd.next());
+  int pinNumber = nextSegmentInt();
   digitalWrite(pinNumber, LOW);
 }
 

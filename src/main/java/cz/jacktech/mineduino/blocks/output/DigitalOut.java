@@ -1,12 +1,12 @@
-package cz.jacktech.mineduino.blocks;
+package cz.jacktech.mineduino.blocks.output;
 
 import cz.jacktech.mineduino.MineDuinoMod;
 import cz.jacktech.mineduino.serialiface.SerialManager;
-import cz.jacktech.mineduino.tiles.AnalogOutEntity;
 import cz.jacktech.mineduino.tiles.DigitalOutEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -14,16 +14,15 @@ import net.minecraft.world.World;
 import java.util.Random;
 
 /**
- * Created by toor on 13.11.14.
+ * Created by toor on 11.11.14.
  */
-public class AnalogOut extends BlockContainer{
+public class DigitalOut extends BlockContainer{
 
-    public static final String BLOCK_NAME = "analogOut";
+    public static final String BLOCK_NAME = "digitalOUT";
 
     private boolean isBlockPowered = false;
-    private int currentPowerLevel = 0;
 
-    public AnalogOut() {
+    public DigitalOut() {
         super(Material.circuits);
         setTickRandomly(true);
         setBlockName(BLOCK_NAME);
@@ -34,7 +33,7 @@ public class AnalogOut extends BlockContainer{
     @Override
     public TileEntity createNewTileEntity(World world, int i) {
         try {
-            return new AnalogOutEntity();
+            return new DigitalOutEntity();
         }catch (Exception e){}
         return null;
     }
@@ -53,18 +52,15 @@ public class AnalogOut extends BlockContainer{
         if(!world.isRemote) {
             TileEntity tileEntity = world.getTileEntity(x, y, z);
             //System.out.println("update powered state");
-            if (tileEntity != null && tileEntity instanceof AnalogOutEntity) {
-                AnalogOutEntity entity = (AnalogOutEntity) tileEntity;
+            if (tileEntity != null && tileEntity instanceof DigitalOutEntity) {
+                DigitalOutEntity entity = (DigitalOutEntity) tileEntity;
                 boolean blockIsPowered = world.isBlockIndirectlyGettingPowered(x, y, z);
-                int powerLevel = world.getBlockPowerInput(x, y, z);
                 //System.out.println("is block powered : "+blockIsPowered+", "+entity.getArduinoPin());
-                if(isBlockPowered != blockIsPowered || currentPowerLevel != powerLevel) {
+                if(isBlockPowered != blockIsPowered) {
                     isBlockPowered = blockIsPowered;
-                    currentPowerLevel = powerLevel;
                     boolean cmdSuccess = false;
-                    //System.out.println("power level : "+powerLevel);
                     if (blockIsPowered && entity.getArduinoPin() != -1) {
-                        cmdSuccess = SerialManager.getInstance().writeAnalog(entity.getArduinoPin(), powerLevel*17);
+                        cmdSuccess = SerialManager.getInstance().enablePin(entity.getArduinoPin());
                     } else {
                         cmdSuccess = SerialManager.getInstance().disablePin(entity.getArduinoPin());
                     }

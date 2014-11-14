@@ -1,4 +1,4 @@
-package cz.jacktech.mineduino.blocks;
+package cz.jacktech.mineduino.blocks.input;
 
 import cz.jacktech.mineduino.MineDuinoMod;
 import cz.jacktech.mineduino.serialiface.SerialManager;

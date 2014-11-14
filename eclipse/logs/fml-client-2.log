@@ -1010,14 +1010,14 @@
 [09:36:01] [Client thread/TRACE] [Forge/Forge]: Sending event FMLInitializationEvent to mod Forge
 [09:36:01] [Client thread/TRACE] [Forge/Forge]: Sent event FMLInitializationEvent to mod Forge
 [09:36:01] [Client thread/TRACE] [mineduino/mineduino]: Sending event FMLInitializationEvent to mod mineduino
-[09:36:01] [Client thread/TRACE] [FML/mineduino]: Registry add: mineduino:digitalIN 165 cz.jacktech.mineduino.blocks.DigitalIn@3fc98475 (req. id -1)
-[09:36:01] [Client thread/DEBUG] [FML/mineduino]: Found matching Block cz.jacktech.mineduino.blocks.DigitalIn@3fc98475 for ItemBlock net.minecraft.item.ItemBlock@47173e0a at id 165, original id requested: -1
+[09:36:01] [Client thread/TRACE] [FML/mineduino]: Registry add: mineduino:digitalIN 165 cz.jacktech.mineduino.blocks.input.DigitalIn@3fc98475 (req. id -1)
+[09:36:01] [Client thread/DEBUG] [FML/mineduino]: Found matching Block cz.jacktech.mineduino.blocks.input.DigitalIn@3fc98475 for ItemBlock net.minecraft.item.ItemBlock@47173e0a at id 165, original id requested: -1
 [09:36:01] [Client thread/TRACE] [FML/mineduino]: Registry add: mineduino:digitalIN 165 net.minecraft.item.ItemBlock@47173e0a (req. id 165)
-[09:36:01] [Client thread/TRACE] [FML/mineduino]: Registry add: mineduino:digitalOUT 166 cz.jacktech.mineduino.blocks.DigitalOut@70c9dffb (req. id -1)
-[09:36:01] [Client thread/DEBUG] [FML/mineduino]: Found matching Block cz.jacktech.mineduino.blocks.DigitalOut@70c9dffb for ItemBlock net.minecraft.item.ItemBlock@55901196 at id 166, original id requested: -1
+[09:36:01] [Client thread/TRACE] [FML/mineduino]: Registry add: mineduino:digitalOUT 166 cz.jacktech.mineduino.blocks.output.DigitalOut@70c9dffb (req. id -1)
+[09:36:01] [Client thread/DEBUG] [FML/mineduino]: Found matching Block cz.jacktech.mineduino.blocks.output.DigitalOut@70c9dffb for ItemBlock net.minecraft.item.ItemBlock@55901196 at id 166, original id requested: -1
 [09:36:01] [Client thread/TRACE] [FML/mineduino]: Registry add: mineduino:digitalOUT 166 net.minecraft.item.ItemBlock@55901196 (req. id 166)
-[09:36:01] [Client thread/TRACE] [FML/mineduino]: Registry add: mineduino:analogOut 167 cz.jacktech.mineduino.blocks.AnalogOut@5306ed55 (req. id -1)
-[09:36:01] [Client thread/DEBUG] [FML/mineduino]: Found matching Block cz.jacktech.mineduino.blocks.AnalogOut@5306ed55 for ItemBlock net.minecraft.item.ItemBlock@6bc79208 at id 167, original id requested: -1
+[09:36:01] [Client thread/TRACE] [FML/mineduino]: Registry add: mineduino:analogOut 167 cz.jacktech.mineduino.blocks.output.AnalogOut@5306ed55 (req. id -1)
+[09:36:01] [Client thread/DEBUG] [FML/mineduino]: Found matching Block cz.jacktech.mineduino.blocks.output.AnalogOut@5306ed55 for ItemBlock net.minecraft.item.ItemBlock@6bc79208 at id 167, original id requested: -1
 [09:36:01] [Client thread/TRACE] [FML/mineduino]: Registry add: mineduino:analogOut 167 net.minecraft.item.ItemBlock@6bc79208 (req. id 167)
 [09:36:01] [Client thread/TRACE] [mineduino/mineduino]: Sent event FMLInitializationEvent to mod mineduino
 [09:36:01] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod mcp
@@ -1253,9 +1253,9 @@
 [09:36:17] [Server thread/TRACE] [FML/]: Registry: minecraft:log2 162 net.minecraft.block.BlockNewLog@44aeddd7
 [09:36:17] [Server thread/TRACE] [FML/]: Registry: minecraft:acacia_stairs 163 net.minecraft.block.BlockStairs@3466717b
 [09:36:17] [Server thread/TRACE] [FML/]: Registry: minecraft:dark_oak_stairs 164 net.minecraft.block.BlockStairs@31a45d1d
-[09:36:17] [Server thread/TRACE] [FML/]: Registry: mineduino:digitalIN 165 cz.jacktech.mineduino.blocks.DigitalIn@3fc98475
-[09:36:17] [Server thread/TRACE] [FML/]: Registry: mineduino:digitalOUT 166 cz.jacktech.mineduino.blocks.DigitalOut@70c9dffb
-[09:36:17] [Server thread/TRACE] [FML/]: Registry: mineduino:analogOut 167 cz.jacktech.mineduino.blocks.AnalogOut@5306ed55
+[09:36:17] [Server thread/TRACE] [FML/]: Registry: mineduino:digitalIN 165 cz.jacktech.mineduino.blocks.input.DigitalIn@3fc98475
+[09:36:17] [Server thread/TRACE] [FML/]: Registry: mineduino:digitalOUT 166 cz.jacktech.mineduino.blocks.output.DigitalOut@70c9dffb
+[09:36:17] [Server thread/TRACE] [FML/]: Registry: mineduino:analogOut 167 cz.jacktech.mineduino.blocks.output.AnalogOut@5306ed55
 [09:36:17] [Server thread/TRACE] [FML/]: Registry: minecraft:hay_block 170 net.minecraft.block.BlockHay@103b82a7
 [09:36:17] [Server thread/TRACE] [FML/]: Registry: minecraft:carpet 171 net.minecraft.block.BlockCarpet@7851de9b
 [09:36:17] [Server thread/TRACE] [FML/]: Registry: minecraft:hardened_clay 172 net.minecraft.block.BlockHardenedClay@6f3ddcaf
@@ -1587,7 +1587,7 @@
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:sapling 6 net.minecraft.block.BlockSapling@1bc19983 (req. id 6)
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:iron_door 71 net.minecraft.block.BlockDoor@5aad33e4 (req. id 71)
 [09:36:17] [Server thread/DEBUG] [FML/]: Fixed block id mismatch mineduino:digitalIN: 165 (init) -> 166 (map).
-[09:36:17] [Server thread/TRACE] [FML/]: Registry add: mineduino:digitalIN 166 cz.jacktech.mineduino.blocks.DigitalIn@3fc98475 (req. id 166)
+[09:36:17] [Server thread/TRACE] [FML/]: Registry add: mineduino:digitalIN 166 cz.jacktech.mineduino.blocks.input.DigitalIn@3fc98475 (req. id 166)
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:lapis_ore 21 net.minecraft.block.BlockOre@5be8701a (req. id 21)
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:unpowered_comparator 149 net.minecraft.block.BlockRedstoneComparator@23d29c10 (req. id 149)
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:redstone_lamp 123 net.minecraft.block.BlockRedstoneLight@876c964 (req. id 123)
@@ -1691,7 +1691,7 @@
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:red_mushroom_block 100 net.minecraft.block.BlockHugeMushroom@445ac6e6 (req. id 100)
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:spruce_stairs 134 net.minecraft.block.BlockStairs@77216186 (req. id 134)
 [09:36:17] [Server thread/DEBUG] [FML/]: Fixed block id mismatch mineduino:analogOut: 167 (init) -> 168 (map).
-[09:36:17] [Server thread/TRACE] [FML/]: Registry add: mineduino:analogOut 168 cz.jacktech.mineduino.blocks.AnalogOut@5306ed55 (req. id 168)
+[09:36:17] [Server thread/TRACE] [FML/]: Registry add: mineduino:analogOut 168 cz.jacktech.mineduino.blocks.output.AnalogOut@5306ed55 (req. id 168)
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:wall_sign 68 net.minecraft.block.BlockSign@5d431617 (req. id 68)
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:nether_brick 112 net.minecraft.block.Block@330f5699 (req. id 112)
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:fire 51 net.minecraft.block.BlockFire@9eb67cb (req. id 51)
@@ -1749,7 +1749,7 @@
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:lapis_block 22 net.minecraft.block.BlockCompressed@1d86e554 (req. id 22)
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:carpet 171 net.minecraft.block.BlockCarpet@7851de9b (req. id 171)
 [09:36:17] [Server thread/DEBUG] [FML/]: Fixed block id mismatch mineduino:digitalOUT: 166 (init) -> 167 (map).
-[09:36:17] [Server thread/TRACE] [FML/]: Registry add: mineduino:digitalOUT 167 cz.jacktech.mineduino.blocks.DigitalOut@70c9dffb (req. id 167)
+[09:36:17] [Server thread/TRACE] [FML/]: Registry add: mineduino:digitalOUT 167 cz.jacktech.mineduino.blocks.output.DigitalOut@70c9dffb (req. id 167)
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:redstone_block 152 net.minecraft.block.BlockCompressedPowered@2611b45 (req. id 152)
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:furnace 61 net.minecraft.block.BlockFurnace@19e0b0ed (req. id 61)
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:soul_sand 88 net.minecraft.block.BlockSoulSand@504c12ab (req. id 88)
@@ -1808,7 +1808,7 @@
 [09:36:17] [Server thread/DEBUG] [FML/]: Found matching Block net.minecraft.block.BlockStoneSlab@754e6d40 for ItemBlock net.minecraft.item.ItemSlab@3a49fc15 at id 43, original id requested: 43
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:double_stone_slab 43 net.minecraft.item.ItemSlab@3a49fc15 (req. id 43)
 [09:36:17] [Server thread/DEBUG] [FML/]: Fixed item id mismatch mineduino:analogOut: 167 (init) -> 168 (map).
-[09:36:17] [Server thread/DEBUG] [FML/]: Found matching Block cz.jacktech.mineduino.blocks.AnalogOut@5306ed55 for ItemBlock net.minecraft.item.ItemBlock@6bc79208 at id 168, original id requested: 168
+[09:36:17] [Server thread/DEBUG] [FML/]: Found matching Block cz.jacktech.mineduino.blocks.output.AnalogOut@5306ed55 for ItemBlock net.minecraft.item.ItemBlock@6bc79208 at id 168, original id requested: 168
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: mineduino:analogOut 168 net.minecraft.item.ItemBlock@6bc79208 (req. id 168)
 [09:36:17] [Server thread/DEBUG] [FML/]: Found matching Block net.minecraft.block.BlockGravel@1de646e8 for ItemBlock net.minecraft.item.ItemBlock@120c1a4f at id 13, original id requested: 13
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:gravel 13 net.minecraft.item.ItemBlock@120c1a4f (req. id 13)
@@ -1837,7 +1837,7 @@
 [09:36:17] [Server thread/DEBUG] [FML/]: Found matching Block net.minecraft.block.Block@73cc3f28 for ItemBlock net.minecraft.item.ItemBlock@1ae0b4e5 at id 121, original id requested: 121
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:end_stone 121 net.minecraft.item.ItemBlock@1ae0b4e5 (req. id 121)
 [09:36:17] [Server thread/DEBUG] [FML/]: Fixed item id mismatch mineduino:digitalOUT: 166 (init) -> 167 (map).
-[09:36:17] [Server thread/DEBUG] [FML/]: Found matching Block cz.jacktech.mineduino.blocks.DigitalOut@70c9dffb for ItemBlock net.minecraft.item.ItemBlock@55901196 at id 167, original id requested: 167
+[09:36:17] [Server thread/DEBUG] [FML/]: Found matching Block cz.jacktech.mineduino.blocks.output.DigitalOut@70c9dffb for ItemBlock net.minecraft.item.ItemBlock@55901196 at id 167, original id requested: 167
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: mineduino:digitalOUT 167 net.minecraft.item.ItemBlock@55901196 (req. id 167)
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:record_chirp 2259 net.minecraft.item.ItemRecord@3637faea (req. id 2259)
 [09:36:17] [Server thread/DEBUG] [FML/]: Found matching Block net.minecraft.block.BlockNote@799c787c for ItemBlock net.minecraft.item.ItemBlock@5c11eac at id 25, original id requested: 25
@@ -1850,7 +1850,7 @@
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:leather_boots 301 net.minecraft.item.ItemArmor@7551a932 (req. id 301)
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:iron_axe 258 net.minecraft.item.ItemAxe@385900f (req. id 258)
 [09:36:17] [Server thread/DEBUG] [FML/]: Fixed item id mismatch mineduino:digitalIN: 165 (init) -> 166 (map).
-[09:36:17] [Server thread/DEBUG] [FML/]: Found matching Block cz.jacktech.mineduino.blocks.DigitalIn@3fc98475 for ItemBlock net.minecraft.item.ItemBlock@47173e0a at id 166, original id requested: 166
+[09:36:17] [Server thread/DEBUG] [FML/]: Found matching Block cz.jacktech.mineduino.blocks.input.DigitalIn@3fc98475 for ItemBlock net.minecraft.item.ItemBlock@47173e0a at id 166, original id requested: 166
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: mineduino:digitalIN 166 net.minecraft.item.ItemBlock@47173e0a (req. id 166)
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:bucket 325 net.minecraft.item.ItemBucket@4ae85cdf (req. id 325)
 [09:36:17] [Server thread/TRACE] [FML/]: Registry add: minecraft:iron_shovel 256 net.minecraft.item.ItemSpade@39e4aec9 (req. id 256)
@@ -2391,9 +2391,9 @@
 [09:36:17] [Server thread/TRACE] [FML/]: Registry: minecraft:log2 162 net.minecraft.block.BlockNewLog@44aeddd7
 [09:36:17] [Server thread/TRACE] [FML/]: Registry: minecraft:acacia_stairs 163 net.minecraft.block.BlockStairs@3466717b
 [09:36:17] [Server thread/TRACE] [FML/]: Registry: minecraft:dark_oak_stairs 164 net.minecraft.block.BlockStairs@31a45d1d
-[09:36:17] [Server thread/TRACE] [FML/]: Registry: mineduino:digitalIN 166 cz.jacktech.mineduino.blocks.DigitalIn@3fc98475
-[09:36:17] [Server thread/TRACE] [FML/]: Registry: mineduino:digitalOUT 167 cz.jacktech.mineduino.blocks.DigitalOut@70c9dffb
-[09:36:17] [Server thread/TRACE] [FML/]: Registry: mineduino:analogOut 168 cz.jacktech.mineduino.blocks.AnalogOut@5306ed55
+[09:36:17] [Server thread/TRACE] [FML/]: Registry: mineduino:digitalIN 166 cz.jacktech.mineduino.blocks.input.DigitalIn@3fc98475
+[09:36:17] [Server thread/TRACE] [FML/]: Registry: mineduino:digitalOUT 167 cz.jacktech.mineduino.blocks.output.DigitalOut@70c9dffb
+[09:36:17] [Server thread/TRACE] [FML/]: Registry: mineduino:analogOut 168 cz.jacktech.mineduino.blocks.output.AnalogOut@5306ed55
 [09:36:17] [Server thread/TRACE] [FML/]: Registry: minecraft:hay_block 170 net.minecraft.block.BlockHay@103b82a7
 [09:36:17] [Server thread/TRACE] [FML/]: Registry: minecraft:carpet 171 net.minecraft.block.BlockCarpet@7851de9b
 [09:36:17] [Server thread/TRACE] [FML/]: Registry: minecraft:hardened_clay 172 net.minecraft.block.BlockHardenedClay@6f3ddcaf

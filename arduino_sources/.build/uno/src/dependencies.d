@@ -9,6 +9,4 @@
  /usr/share/arduino/hardware/arduino/cores/arduino/Printable.h \
  /usr/share/arduino/hardware/arduino/cores/arduino/new.h \
  /usr/share/arduino/hardware/arduino/variants/standard/pins_arduino.h \
- /usr/share/arduino/libraries/SoftwareSerial/SoftwareSerial.h \
- /usr/share/arduino/hardware/arduino/cores/arduino/Stream.h \
- lib/ArduinoSerialCommand/SerialCommand.h
+ lib/OneWire/OneWire.h lib/DallasTemperature/DallasTemperature.h
