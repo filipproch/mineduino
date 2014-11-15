@@ -13,7 +13,7 @@
 
 
 .build/uno/DallasTemperature/dependencies.d : 
-	@echo [96mScanning dependencies of DallasTemperature[0m
+	@echo Scanning dependencies of DallasTemperature
 	@mkdir -p .build/uno/DallasTemperature
 	@touch $@;
 

@@ -18,8 +18,8 @@ buildscript {
 apply plugin: 'forge'
 
 version = "1.0"
-group= "com.yourname.modid" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "modid"
+group= "cz.jacktech.mineduino" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "mineduino"
 
 minecraft {
     version = "1.7.10-10.13.2.1236"
@@ -62,3 +62,26 @@ processResources
         exclude 'mcmod.info'
     }
 }
+
+task compileArduino << {
+    println 'Compiling Arduino code using ino tool'
+    tasks.executeInoCompile.execute()
+}
+
+task executeInoCompile(type: Exec){
+    workingDir file('arduino_sources/')
+    commandLine 'ino', 'build'
+}
+
+task executeInoUpload(type: Exec){
+    workingDir file('arduino_sources/')
+    commandLine 'ino', 'upload'
+}
+
+task uploadArduino << {
+    println 'Uploading Arduino project to connected device'
+    tasks.executeInoUpload.execute()
+}
+
+uploadArduino.dependsOn compileArduino
+uploadArduino.mustRunAfter compileArduino

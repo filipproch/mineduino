@@ -5,7 +5,7 @@
 
 .build/uno/src/mineduino.cpp : src/mineduino.ino
 	@mkdir -p .build/uno/src
-	@echo [93msrc/mineduino.ino[0m
+	@echo src/mineduino.ino
 	@/usr/local/bin/ino preproc  -o $@ $^
 
 
