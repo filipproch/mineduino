@@ -2771,7 +2771,7 @@
 [09:41:24] [Client thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:138]: sent command: setupInput 4
 [09:41:24] [Client thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:138]: sent command: setupOutput 2
 [09:41:28] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save MineDuino - test
-[09:41:33] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.synch.DigitalPinSyncMessage$Handler:onMessage:52]: updating entity
+[09:41:33] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.synch.ArduinoPinSyncMessage$Handler:onMessage:52]: updating entity
 [09:41:36] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:138]: sent command: changeHigh 2
 [09:41:36] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:138]: sent command: writeAna 6 136
 [09:41:42] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:138]: sent command: changeLow 6
@@ -2804,7 +2804,7 @@
 [09:42:16] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save MineDuino - test
 [09:42:23] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save MineDuino - test
 [09:42:26] [Client thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:138]: sent command: setupInput 4
-[09:42:26] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.synch.DigitalPinSyncMessage$Handler:onMessage:52]: updating entity
+[09:42:26] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.synch.ArduinoPinSyncMessage$Handler:onMessage:52]: updating entity
 [09:42:26] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:138]: sent command: setupInput 4
 [09:42:27] [Client thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:138]: sent command: setupInput 4
 [09:42:41] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:138]: sent command: setupOutput 4
@@ -2813,7 +2813,7 @@
 [09:42:48] [Client thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:138]: sent command: setupInput 2
 [09:42:48] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save MineDuino - test
 [09:42:50] [Client thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:138]: sent command: setupInput 4
-[09:42:51] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.synch.DigitalPinSyncMessage$Handler:onMessage:52]: updating entity
+[09:42:51] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.synch.ArduinoPinSyncMessage$Handler:onMessage:52]: updating entity
 [09:42:51] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:138]: sent command: setupInput 4
 [09:42:51] [Client thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:138]: sent command: setupInput 4
 [09:42:51] [Client thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:138]: sent command: setupInput 4

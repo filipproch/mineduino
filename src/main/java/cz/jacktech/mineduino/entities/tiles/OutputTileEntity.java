@@ -13,11 +13,9 @@ public class OutputTileEntity extends ETileEntity {
     public static final String ENTITY_NAME = OutputTileEntity.class.getSimpleName();
     private static final String OUTPUT_NAME = "OutputName";
 
-    private String outputName;
+    private String outputName = "-1";
 
-    public OutputTileEntity(IEntityRequester requester) {
-        super(requester);
-    }
+    public OutputTileEntity(){};
 
     @Override
     public void writeToNBT(NBTTagCompound nbttag) {
@@ -37,6 +35,8 @@ public class OutputTileEntity extends ETileEntity {
 
     public void setOutputName(String outputName) {
         this.outputName = outputName;
+        if(requester != null)
+            requester.updateGuiClosed(this);
     }
 
 }

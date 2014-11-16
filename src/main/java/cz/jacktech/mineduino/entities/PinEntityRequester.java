@@ -1,6 +1,7 @@
 package cz.jacktech.mineduino.entities;
 
 import cz.jacktech.mineduino.entities.tiles.InputTileEntity;
+import cz.jacktech.mineduino.entities.tiles.OutputTileEntity;
 import cz.jacktech.mineduino.serialiface.SerialManager;
 import cz.jacktech.mineduino.serialiface.arduino.ArduinoDigitalPin;
 import cz.jacktech.mineduino.serialiface.arduino.ArduinoPin;
@@ -14,7 +15,7 @@ public abstract class PinEntityRequester implements IEntityRequester{
 
     protected ArduinoPin getPin(ETileEntity entity){
         try {
-            System.out.println("EntityValueStore: "+entity.getValueStore());
+            //System.out.println("EntityValueStore: " + entity.getValueStore());
             return (ArduinoDigitalPin) entity.getValueStore().getObject(ARDUINO_PIN);
         }catch (Exception e){
             e.printStackTrace();
@@ -23,10 +24,27 @@ public abstract class PinEntityRequester implements IEntityRequester{
     }
 
     @Override
+    public void updateGuiClosed(ETileEntity entity) {
+        storeArduinoPin(entity);
+    }
+
+    @Override
     public void create(ETileEntity entity) {
-        System.out.println("creating pin entity requester");
-        InputTileEntity inputTileEntity = (InputTileEntity) entity;
-        entity.getValueStore().putObject(ARDUINO_PIN, SerialManager.getInstance().getPin(Integer.parseInt(inputTileEntity.getInputName())));
+        storeArduinoPin(entity);
+    }
+
+    private void storeArduinoPin(ETileEntity entity){
+        try {
+            if (entity instanceof InputTileEntity) {
+                InputTileEntity inputTileEntity = (InputTileEntity) entity;
+                entity.getValueStore().putObject(ARDUINO_PIN, SerialManager.getInstance().getPin(Integer.parseInt(inputTileEntity.getInputName())));
+            } else if (entity instanceof OutputTileEntity) {
+                OutputTileEntity outputTileEntity = (OutputTileEntity) entity;
+                entity.getValueStore().putObject(ARDUINO_PIN, SerialManager.getInstance().getPin(Integer.parseInt(outputTileEntity.getOutputName())));
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
 }

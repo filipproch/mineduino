@@ -5,6 +5,7 @@
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.scream3r/jssc/2.8.0/42189f16442278574bfb571b313711b600e620e3/jssc-2.8.0-javadoc.jar!/" />
+      <root url="http://java-simple-serial-connector.googlecode.com/svn/trunk/additional_content/javadoc/0.8/index.html" />
     </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.scream3r/jssc/2.8.0/d3e51b3dec3f4b4b76895c236a1ab1cdf6176bd9/jssc-2.8.0-sources.jar!/" />

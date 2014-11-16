@@ -1,6 +1,10 @@
 package cz.jacktech.mineduino.gui;
 
+import cz.jacktech.mineduino.MineDuinoMod;
 import cz.jacktech.mineduino.entities.ETileEntity;
+import cz.jacktech.mineduino.entities.tiles.InputTileEntity;
+import cz.jacktech.mineduino.entities.tiles.OutputTileEntity;
+import cz.jacktech.mineduino.synch.ArduinoPinSyncMessage;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.resources.I18n;
@@ -39,7 +43,10 @@ public class GuiEnterDigitalPin extends GuiScreen {
         this.commandTextField.setFocused(true);
         if(tileEntity.getArduinoPin() != -1)
             this.commandTextField.setText(String.valueOf(tileEntity.getArduinoPin()));*/
-        //arduinoPin = tileEntity.getArduinoPin();
+        if(tileEntity instanceof InputTileEntity)
+            arduinoPin = Integer.parseInt(((InputTileEntity)tileEntity).getInputName());
+        else if(tileEntity instanceof OutputTileEntity)
+            arduinoPin = Integer.parseInt(((OutputTileEntity)tileEntity).getOutputName());
 
         //this.doneBtn.enabled = this.commandTextField.getText().trim().length() > 0;
     }
@@ -51,7 +58,7 @@ public class GuiEnterDigitalPin extends GuiScreen {
                 case 0: //done button
                     try{
                         //tileEntity.setArduinoPin(arduinoPin);
-                        //MineDuinoMod.INSTANCE.sendToServer(new DigitalPinSyncMessage().setup(tileEntity));
+                        MineDuinoMod.INSTANCE.sendToServer(new ArduinoPinSyncMessage().setup(tileEntity, arduinoPin));
                     }catch (Exception exception){
                         exception.printStackTrace();
                     }
@@ -61,7 +68,7 @@ public class GuiEnterDigitalPin extends GuiScreen {
                     mc.displayGuiScreen((GuiScreen)null);
                     break;
                 case 2: //leftButton
-                    if(arduinoPin > 2)
+                    if(arduinoPin > 0)
                         arduinoPin --;
                     break;
                 case 3: //right button

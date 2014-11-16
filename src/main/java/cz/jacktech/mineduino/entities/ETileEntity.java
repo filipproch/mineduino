@@ -11,12 +11,15 @@ import net.minecraft.tileentity.TileEntity;
  */
 public class ETileEntity extends TileEntity{
 
-    private final IEntityRequester requester;
-    private final EntityValueStore valueStore;
+    protected IEntityRequester requester;
+    protected final EntityValueStore valueStore;
 
-    public ETileEntity(IEntityRequester requester) {
-        this.requester = requester;
+    public ETileEntity() {
         this.valueStore = new EntityValueStore();
+    }
+
+    public void setRequester(IEntityRequester requester){
+        this.requester = requester;
         requester.create(this);
     }
 

@@ -10,6 +10,7 @@ import cz.jacktech.mineduino.serialiface.arduino.ArduinoDigitalPin;
 import cz.jacktech.mineduino.entities.ETileEntity;
 import cz.jacktech.mineduino.entities.IEntityRequester;
 import cz.jacktech.mineduino.entities.tiles.InputTileEntity;
+import cz.jacktech.mineduino.serialiface.arduino.ArduinoPin;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -30,7 +31,7 @@ public class DigitalIn extends ABlock {
 
     @Override
     public TileEntity createNewTileEntity(World world, int i) {
-        return new InputTileEntity(mDataRequester);
+        return new InputTileEntity();
     }
 
     private static PinEntityRequester mDataRequester = new PinEntityRequester() {
@@ -57,6 +58,12 @@ public class DigitalIn extends ABlock {
         @Override
         public boolean canProvidePower() {
             return true;
+        }
+
+        @Override
+        public void blockAdded(ETileEntity tileEntity) {
+            ArduinoDigitalPin pin = (ArduinoDigitalPin) getPin(tileEntity);
+            pin.updateMode(ArduinoPin.PinMode.INPUT);
         }
 
     };

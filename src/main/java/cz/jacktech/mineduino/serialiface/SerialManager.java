@@ -6,6 +6,8 @@ import cz.jacktech.mineduino.serialiface.arduino.ArduinoDevice;
 import cz.jacktech.mineduino.serialiface.arduino.ArduinoDigitalPin;
 import cz.jacktech.mineduino.serialiface.arduino.ArduinoPin;
 import jssc.SerialPort;
+import jssc.SerialPortEvent;
+import jssc.SerialPortEventListener;
 import jssc.SerialPortException;
 
 import java.util.ArrayList;
@@ -40,9 +42,18 @@ public class SerialManager {
         serialPort = new SerialPort(SERIAL_PORT);
         try {
             serialPort.openPort();
-            mSerialIfaceReaderThread = new Thread(serialIfaceReader);
-            mSerialIfaceReaderThread.start();
+            serialPort.setParams(SerialPort.BAUDRATE_9600,
+                    SerialPort.DATABITS_8,
+                    SerialPort.STOPBITS_1,
+                    SerialPort.PARITY_NONE);
+            int mask = SerialPort.MASK_RXCHAR + SerialPort.MASK_CTS + SerialPort.MASK_DSR + SerialPort.MASK_TXEMPTY;//Prepare mask
+            serialPort.addEventListener(new SerialPortReader(), mask);
+
+            System.out.println("SerialManager reader started");
+            //mSerialIfaceReaderThread = new Thread(serialIfaceReader);
+            //mSerialIfaceReaderThread.start();
             System.out.println("SerialManager connected successfully");
+            System.out.println("Serial pins: "+arduinoPins.size());
         } catch (SerialPortException e) {
             System.out.println("SerialManager failed");
             e.printStackTrace();
@@ -52,7 +63,7 @@ public class SerialManager {
     public void close(){
         System.out.println("SerialManager disconnecting");
         if(isAvailable()) {
-            mSerialIfaceReaderThread.interrupt();
+            //mSerialIfaceReaderThread.interrupt();
             try {
                 serialPort.closePort();
             } catch (SerialPortException e) {
@@ -81,25 +92,17 @@ public class SerialManager {
 
         private void startReader() throws InterruptedException, SerialPortException {
             String line;
-            System.out.println("SerialManager reader started");
-            sendCmd("/connected/\n");
-            while(isAvailable()){
-                cmd.append(serialPort.readString());
-                if(cmd.length() > 0) {
-                    parseCmd();
+            while (isAvailable()) {
+                line = serialPort.readString();
+                if (line != null) {
+                    cmd.append(line);
+                    System.out.println(cmd.toString());
+                    if (cmd.length() > 0) {
+                        //parseCmd();
+                    }
                 }
             }
-        }
-
-        private void parseCmd() {
-            if(cmd.indexOf("\n") != -1){
-                String[] input = cmd.toString().split("\n");
-                cmd = new StringBuilder(input[input.length-1]);
-                for(int i = 0;i<input.length-1;i++){
-                    String line = input[i];
-                    inputReceived(new SerialData(line));
-                }
-            }
+            System.out.println("SerialManager reader stopped");
         }
     };
 
@@ -148,6 +151,7 @@ public class SerialManager {
     }
 
     private void addDigitalPins(int pins) {
+        arduinoPins.clear();
         for(int i = 0;i< pins;i++){
             arduinoPins.add(ArduinoPin.create(i, 0, false));
         }
@@ -163,8 +167,9 @@ public class SerialManager {
     private boolean sendCmd(String cmd) {
         if(serialPort != null && serialPort.isOpened()) {
             try {
-                serialPort.writeString(cmd + "\n");
-                System.out.println("sent command: " + cmd);
+                String line = cmd + "\n";
+                serialPort.writeBytes(line.getBytes());
+                System.out.println("sent command: " + line);
                 return true;
             } catch (SerialPortException e) {
                 e.printStackTrace();
@@ -209,5 +214,56 @@ public class SerialManager {
             if(pin.pinNumber == pinNumber)
                 return pin;
         return null;
+    }
+
+    private class SerialPortReader implements SerialPortEventListener {
+
+        private StringBuilder message = new StringBuilder();
+
+        @Override
+        public void serialEvent(SerialPortEvent event) {
+            System.out.println("serialEvent: "+event.getEventType());
+            if(event.isRXCHAR() && event.getEventValue() > 0){
+                try {
+                    byte buffer[] = serialPort.readBytes();
+                    for (byte b: buffer) {
+                        if ( (b == '\r' || b == '\n') && message.length() > 0) {
+                            String toProcess = message.toString();
+                            inputReceived(new SerialData(toProcess));
+                            message.setLength(0);
+                        }
+                        else {
+                            message.append((char)b);
+                        }
+                    }
+                }
+                catch (SerialPortException ex) {
+                    System.out.println(ex);
+                    System.out.println("serialEvent");
+                }
+                /*try {
+                    cmd.append(serialPort.readString());
+                    System.out.println(cmd.toString());
+                    if (cmd.length() > 0) {
+                        parseCmd();
+                    }
+                }catch (SerialPortException ex) {
+                    System.out.println(ex);
+                }*/
+            } else if (event.isCTS()) {//If CTS line has changed state
+                if (event.getEventValue() == 1) {//If line is ON
+                    System.out.println("CTS - ON");
+                } else {
+                    System.out.println("CTS - OFF");
+                }
+            } else if (event.isDSR()) {///If DSR line has changed state
+                if (event.getEventValue() == 1) {//If line is ON
+                    System.out.println("DSR - ON");
+                } else {
+                    System.out.println("DSR - OFF");
+                }
+            }
+        }
+
     }
 }

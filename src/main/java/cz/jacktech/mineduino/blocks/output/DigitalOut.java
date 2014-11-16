@@ -10,6 +10,7 @@ import cz.jacktech.mineduino.entities.old.DigitalOutEntity;
 import cz.jacktech.mineduino.entities.tiles.OutputTileEntity;
 import cz.jacktech.mineduino.gui.GuiHandler;
 import cz.jacktech.mineduino.serialiface.arduino.ArduinoDigitalPin;
+import cz.jacktech.mineduino.serialiface.arduino.ArduinoPin;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -39,7 +40,7 @@ public class DigitalOut extends ABlock{
     @Override
     public TileEntity createNewTileEntity(World world, int i) {
         try {
-            return new OutputTileEntity(mDataRequester);
+            return new OutputTileEntity();
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -52,7 +53,8 @@ public class DigitalOut extends ABlock{
         public void requestUpdate(ETileEntity entity) {
             boolean blockIsPowered = isPowered(entity);
             ArduinoDigitalPin pin = (ArduinoDigitalPin) getPin(entity);
-            if(pin.read() != blockIsPowered){
+            if(pin != null && pin.read() != blockIsPowered){
+                System.out.println("updating arduino pin : "+blockIsPowered);
                 pin.update(blockIsPowered);
             }
         }
@@ -75,6 +77,13 @@ public class DigitalOut extends ABlock{
         @Override
         public boolean canProvidePower() {
             return false;
+        }
+
+        @Override
+        public void blockAdded(ETileEntity tileEntity) {
+            ArduinoDigitalPin pin = (ArduinoDigitalPin) getPin(tileEntity);
+            if(pin != null)
+                pin.updateMode(ArduinoPin.PinMode.OUTPUT);
         }
 
         private boolean isPowered(ETileEntity entity){

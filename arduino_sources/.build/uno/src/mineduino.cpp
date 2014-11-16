@@ -63,10 +63,12 @@ int * analogPinsStatus = new int[ANALOG_PINS];
 void setup(){
   Serial.begin(9600);
   currentCommand.reserve(100);
+  printSupportedPins();
   setupPins();
 }
 
 void loop(){
+  //Serial.println("/ping/");
   printData();
   delay(100);
 }
@@ -114,6 +116,8 @@ void readCommand(){
     }else if(line == "connected"){
         printSupportedPins();
         setupPins();
+    }else{
+        Serial.println("/unknown/");
     }
 
     commandReceived = false;
@@ -255,6 +259,8 @@ void printDallasAddress(DeviceAddress deviceAddress){
 }
 
 void setupPins(){
+    pinsStatus = new int[PINS_NUMBER];
+    analogPinsStatus = new int[ANALOG_PINS];
     if(USED_ARDUINO == UNO){
         setupUno();
     }else if(USED_ARDUINO == MEGA2560){

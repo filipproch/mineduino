@@ -13,11 +13,7 @@ public class InputTileEntity extends ETileEntity {
     public static final String ENTITY_NAME = InputTileEntity.class.getSimpleName();
     private static final String INPUT_NAME = "InputName";
 
-    private String inputName;
-
-    public InputTileEntity(IEntityRequester requester) {
-        super(requester);
-    }
+    private String inputName = "-1";
 
     @Override
     public void writeToNBT(NBTTagCompound nbttag) {
@@ -37,6 +33,7 @@ public class InputTileEntity extends ETileEntity {
 
     public void setInputName(String inputName) {
         this.inputName = inputName;
+        requester.updateGuiClosed(this);
     }
 
 }

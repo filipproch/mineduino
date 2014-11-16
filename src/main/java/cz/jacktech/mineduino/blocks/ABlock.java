@@ -25,6 +25,10 @@ public abstract class ABlock extends BlockContainer {
 
     @Override
     public void onBlockAdded(World world, int x, int y, int z) {
+        ETileEntity eTileEntity = (ETileEntity) world.getTileEntity(x, y, z);
+        eTileEntity.setRequester(requester);
+        System.out.println("requester set");
+        requester.blockAdded(eTileEntity);
 
         if (world.getBlockMetadata(x, y, z) == 0) {
             super.onBlockAdded(world, x, y, z);

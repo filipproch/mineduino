@@ -15,7 +15,7 @@ import cz.jacktech.mineduino.blocks.input.DigitalIn;
 import cz.jacktech.mineduino.blocks.output.DigitalOut;
 import cz.jacktech.mineduino.gui.GuiHandler;
 import cz.jacktech.mineduino.serialiface.SerialManager;
-import cz.jacktech.mineduino.synch.DigitalPinSyncMessage;
+import cz.jacktech.mineduino.synch.ArduinoPinSyncMessage;
 import cz.jacktech.mineduino.entities.tiles.InputTileEntity;
 import cz.jacktech.mineduino.entities.tiles.OutputTileEntity;
 import net.minecraft.creativetab.CreativeTabs;
@@ -57,7 +57,7 @@ public class MineDuinoMod {
 
         NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 
-        INSTANCE.registerMessage(DigitalPinSyncMessage.Handler.class, DigitalPinSyncMessage.class, 0, Side.SERVER);
+        INSTANCE.registerMessage(ArduinoPinSyncMessage.Handler.class, ArduinoPinSyncMessage.class, 0, Side.SERVER);
     }
 
     @Mod.EventHandler
