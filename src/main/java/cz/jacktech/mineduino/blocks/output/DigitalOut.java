@@ -1,8 +1,15 @@
 package cz.jacktech.mineduino.blocks.output;
 
 import cz.jacktech.mineduino.MineDuinoMod;
-import cz.jacktech.mineduino.serialiface.SerialManager;
-import cz.jacktech.mineduino.tiles.old.DigitalOutEntity;
+import cz.jacktech.mineduino.blocks.ABlock;
+import cz.jacktech.mineduino.entities.ETileEntity;
+import cz.jacktech.mineduino.entities.EntityValueStore;
+import cz.jacktech.mineduino.entities.IEntityRequester;
+import cz.jacktech.mineduino.entities.PinEntityRequester;
+import cz.jacktech.mineduino.entities.old.DigitalOutEntity;
+import cz.jacktech.mineduino.entities.tiles.OutputTileEntity;
+import cz.jacktech.mineduino.gui.GuiHandler;
+import cz.jacktech.mineduino.serialiface.arduino.ArduinoDigitalPin;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -15,14 +22,14 @@ import java.util.Random;
 /**
  * Created by toor on 11.11.14.
  */
-public class DigitalOut extends BlockContainer{
+public class DigitalOut extends ABlock{
 
     public static final String BLOCK_NAME = "digitalOUT";
 
-    private boolean isBlockPowered = false;
+    //private boolean isBlockPowered = false;
 
     public DigitalOut() {
-        super(Material.circuits);
+        super(Material.circuits, mDataRequester);
         setTickRandomly(true);
         setBlockName(BLOCK_NAME);
         setBlockTextureName(MineDuinoMod.MODID + ":" + BLOCK_NAME);
@@ -32,12 +39,52 @@ public class DigitalOut extends BlockContainer{
     @Override
     public TileEntity createNewTileEntity(World world, int i) {
         try {
-            return new DigitalOutEntity();
-        }catch (Exception e){}
+            return new OutputTileEntity(mDataRequester);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         return null;
     }
 
-    @Override
+    private static PinEntityRequester mDataRequester = new PinEntityRequester() {
+
+        @Override
+        public void requestUpdate(ETileEntity entity) {
+            boolean blockIsPowered = isPowered(entity);
+            ArduinoDigitalPin pin = (ArduinoDigitalPin) getPin(entity);
+            if(pin.read() != blockIsPowered){
+                pin.update(blockIsPowered);
+            }
+        }
+
+        @Override
+        public void blockDestroyed(ETileEntity entity) {
+            ((ArduinoDigitalPin)getPin(entity)).reset();
+        }
+
+        @Override
+        public int getGui(ETileEntity entity) {
+            return GuiHandler.GUI_DIGITAL;
+        }
+
+        @Override
+        public int isProvidingPower(ETileEntity entity) {
+            return 0;
+        }
+
+        @Override
+        public boolean canProvidePower() {
+            return false;
+        }
+
+        private boolean isPowered(ETileEntity entity){
+            return entity.getWorldObj()
+                    .isBlockIndirectlyGettingPowered(entity.xCoord, entity.yCoord, entity.zCoord);
+        }
+
+    };
+
+    /*@Override
     public void onBlockAdded(World world, int x, int y, int z) {
         updatePoweredState(world, x, y, z);
     }
@@ -66,7 +113,7 @@ public class DigitalOut extends BlockContainer{
                     //System.out.println("cmd send " + cmdSuccess);
                 }
             }
-        }*/
+        }
     }
 
     @Override
@@ -83,6 +130,6 @@ public class DigitalOut extends BlockContainer{
 
         player.openGui(MineDuinoMod.instance, 0, world, x, y, z);
         return true;
-    }
+    }*/
 
 }

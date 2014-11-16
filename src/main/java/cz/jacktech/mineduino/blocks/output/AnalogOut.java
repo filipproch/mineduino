@@ -1,8 +1,7 @@
 package cz.jacktech.mineduino.blocks.output;
 
 import cz.jacktech.mineduino.MineDuinoMod;
-import cz.jacktech.mineduino.serialiface.SerialManager;
-import cz.jacktech.mineduino.tiles.old.AnalogOutEntity;
+import cz.jacktech.mineduino.entities.old.AnalogOutEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;

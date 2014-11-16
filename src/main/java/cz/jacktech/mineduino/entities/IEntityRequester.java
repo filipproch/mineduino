@@ -1,4 +1,4 @@
-package cz.jacktech.mineduino.tiles;
+package cz.jacktech.mineduino.entities;
 
 /**
  * Created by toor on 16.11.14.
@@ -10,4 +10,5 @@ public interface IEntityRequester {
     public int getGui(ETileEntity entity);
     public int isProvidingPower(ETileEntity entity);
     public boolean canProvidePower();
+    public void create(ETileEntity entity);
 }

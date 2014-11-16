@@ -1,9 +1,6 @@
 package cz.jacktech.mineduino.gui;
 
-import cz.jacktech.mineduino.MineDuinoMod;
-import cz.jacktech.mineduino.synch.DigitalPinSyncMessage;
-import cz.jacktech.mineduino.tiles.ETileEntity;
-import cz.jacktech.mineduino.tiles.old.DigitalPinEntity;
+import cz.jacktech.mineduino.entities.ETileEntity;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.resources.I18n;

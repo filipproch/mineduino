@@ -2,18 +2,16 @@ package cz.jacktech.mineduino.blocks.input;
 
 import cz.jacktech.mineduino.MineDuinoMod;
 import cz.jacktech.mineduino.blocks.ABlock;
+import cz.jacktech.mineduino.entities.EntityValueStore;
+import cz.jacktech.mineduino.entities.PinEntityRequester;
 import cz.jacktech.mineduino.gui.GuiHandler;
 import cz.jacktech.mineduino.serialiface.SerialManager;
-import cz.jacktech.mineduino.tiles.ETileEntity;
-import cz.jacktech.mineduino.tiles.IEntityRequester;
-import cz.jacktech.mineduino.tiles.InputTileEntity;
-import cz.jacktech.mineduino.tiles.old.DigitalInEntity;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
+import cz.jacktech.mineduino.serialiface.arduino.ArduinoDigitalPin;
+import cz.jacktech.mineduino.entities.ETileEntity;
+import cz.jacktech.mineduino.entities.IEntityRequester;
+import cz.jacktech.mineduino.entities.tiles.InputTileEntity;
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 /**
@@ -35,16 +33,15 @@ public class DigitalIn extends ABlock {
         return new InputTileEntity(mDataRequester);
     }
 
-    private static IEntityRequester mDataRequester = new IEntityRequester() {
+    private static PinEntityRequester mDataRequester = new PinEntityRequester() {
 
         @Override
         public void requestUpdate(ETileEntity entity) {
-
         }
 
         @Override
         public void blockDestroyed(ETileEntity entity) {
-
+            ((ArduinoDigitalPin)getPin(entity)).reset();
         }
 
         @Override
@@ -54,7 +51,7 @@ public class DigitalIn extends ABlock {
 
         @Override
         public int isProvidingPower(ETileEntity entity) {
-            return 0;
+            return ((ArduinoDigitalPin)getPin(entity)).read() ? 15 : 0;
         }
 
         @Override

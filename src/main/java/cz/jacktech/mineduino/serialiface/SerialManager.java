@@ -1,6 +1,7 @@
 package cz.jacktech.mineduino.serialiface;
 
 import cz.jacktech.mineduino.MineDuinoMod;
+import cz.jacktech.mineduino.serialiface.arduino.ArduinoAnalogPin;
 import cz.jacktech.mineduino.serialiface.arduino.ArduinoDevice;
 import cz.jacktech.mineduino.serialiface.arduino.ArduinoDigitalPin;
 import cz.jacktech.mineduino.serialiface.arduino.ArduinoPin;
@@ -81,21 +82,11 @@ public class SerialManager {
         private void startReader() throws InterruptedException, SerialPortException {
             String line;
             System.out.println("SerialManager reader started");
+            sendCmd("/connected/\n");
             while(isAvailable()){
                 cmd.append(serialPort.readString());
                 if(cmd.length() > 0) {
                     parseCmd();
-                    /*cmd.append(line);
-                    //System.out.println("currentData: "+cmd.toString());
-                    int begin, end;
-                    if((begin = cmd.indexOf("#")) >= 0 && (end = cmd.indexOf("$")) > 0){
-                        String input = cmd.substring(begin, end);
-                        cmd = new StringBuilder();
-                        for(String dataLine : input.split("@")){
-                            if(dataLine.length() > 0)
-                                inputReceived(new SerialData(dataLine));
-                        }
-                    }*/
                 }
             }
         }
@@ -114,12 +105,52 @@ public class SerialManager {
 
     private void inputReceived(SerialData input) {
         System.out.println("input received: "+input.toString());
+        if(input.get(0).equals("setup")){
+            if(input.get(1).equals("dpins")){
+                addDigitalPins(input.getInt(2));
+            }else if(input.get(1).equals("apins")){
+                addAnalogPins(input.getInt(2));
+            }
+        }else if(input.get(0).equals("dat")){
+            if(input.get(1).equals("d")){
+                updatePin(input.getInt(2), input.getInt(3), false);
+            }else if(input.get(1).equals("a")){
+                updatePin(input.getInt(2), input.getInt(3), true);
+            }
+        }
+    }
 
-        /*if(!digitalPins.containsKey(input.getInt(0))){
-            digitalPins.put(input.getInt(0), new ArduinoDigitalPin(input));
-        }else{
-            digitalPins.get(input.getInt(0)).status = input.getInt(1);
-        }*/
+    private void updatePin(int pinNumber, int pinValue, boolean analogPin) {
+        boolean updated = false;
+        for(ArduinoPin pin : arduinoPins){
+            if(pin.pinNumber == pinNumber){
+                updated = true;
+                if(analogPin){
+                    ArduinoAnalogPin analogPin1 = (ArduinoAnalogPin) pin;
+                    //todo: set analog pin value
+                }else{
+                    ArduinoDigitalPin digitalPin = (ArduinoDigitalPin) pin;
+                    digitalPin.status = pinValue == 1;
+                }
+                break;
+            }
+        }
+
+        if(!updated){
+            arduinoPins.add(ArduinoPin.create(pinNumber, pinValue, analogPin));
+        }
+    }
+
+    private void addAnalogPins(int pins) {
+        for(int i = 0;i< pins;i++){
+            arduinoPins.add(ArduinoPin.create(i, 0, true));
+        }
+    }
+
+    private void addDigitalPins(int pins) {
+        for(int i = 0;i< pins;i++){
+            arduinoPins.add(ArduinoPin.create(i, 0, false));
+        }
     }
 
     private boolean hasPin(int pinNumber) {
@@ -128,22 +159,6 @@ public class SerialManager {
                 return true;
         return false;
     }
-
-    /*public boolean enablePin(int pinNumber){
-        return sendCmd("changeHigh "+pinNumber);
-    }
-
-    public boolean disablePin(int pinNumber){
-        return sendCmd("changeLow "+pinNumber);
-    }
-
-    public boolean setupInput(int pinNumber){
-        return sendCmd("setupInput "+pinNumber);
-    }
-
-    public boolean setupOutput(int pinNumber){
-        return sendCmd("setupOutput "+pinNumber);
-    }*/
 
     private boolean sendCmd(String cmd) {
         if(serialPort != null && serialPort.isOpened()) {
@@ -187,5 +202,12 @@ public class SerialManager {
                 sendCmd("/set/aout/"+pin.pinNumber);
                 break;
         }
+    }
+
+    public ArduinoPin getPin(int pinNumber) {
+        for(ArduinoPin pin : arduinoPins)
+            if(pin.pinNumber == pinNumber)
+                return pin;
+        return null;
     }
 }

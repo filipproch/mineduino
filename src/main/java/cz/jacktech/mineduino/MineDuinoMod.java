@@ -16,8 +16,8 @@ import cz.jacktech.mineduino.blocks.output.DigitalOut;
 import cz.jacktech.mineduino.gui.GuiHandler;
 import cz.jacktech.mineduino.serialiface.SerialManager;
 import cz.jacktech.mineduino.synch.DigitalPinSyncMessage;
-import cz.jacktech.mineduino.tiles.InputTileEntity;
-import cz.jacktech.mineduino.tiles.OutputTileEntity;
+import cz.jacktech.mineduino.entities.tiles.InputTileEntity;
+import cz.jacktech.mineduino.entities.tiles.OutputTileEntity;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -49,12 +49,9 @@ public class MineDuinoMod {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
-        /*GameRegistry.registerBlock(blockDigitalIn = new DigitalIn(), DigitalIn.BLOCK_NAME);
+        GameRegistry.registerBlock(blockDigitalIn = new DigitalIn(), DigitalIn.BLOCK_NAME);
         GameRegistry.registerBlock(blockDigitalOut = new DigitalOut(), DigitalOut.BLOCK_NAME);
         GameRegistry.registerBlock(blockAnalogOut = new AnalogOut(), AnalogOut.BLOCK_NAME);
-        GameRegistry.registerTileEntity(DigitalInEntity.class, DigitalInEntity.ENTITY_NAME);
-        GameRegistry.registerTileEntity(DigitalOutEntity.class, DigitalOutEntity.ENTITY_NAME);
-        GameRegistry.registerTileEntity(AnalogOutEntity.class, AnalogOutEntity.ENTITY_NAME);*/
         GameRegistry.registerTileEntity(InputTileEntity.class, InputTileEntity.ENTITY_NAME);
         GameRegistry.registerTileEntity(OutputTileEntity.class, OutputTileEntity.ENTITY_NAME);
 

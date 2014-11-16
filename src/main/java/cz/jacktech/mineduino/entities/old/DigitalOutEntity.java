@@ -1,6 +1,4 @@
-package cz.jacktech.mineduino.tiles.old;
-
-import cz.jacktech.mineduino.serialiface.SerialManager;
+package cz.jacktech.mineduino.entities.old;
 
 /**
  * Created by toor on 11.11.14.

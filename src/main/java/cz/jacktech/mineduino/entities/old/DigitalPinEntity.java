@@ -1,4 +1,4 @@
-package cz.jacktech.mineduino.tiles.old;
+package cz.jacktech.mineduino.entities.old;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;

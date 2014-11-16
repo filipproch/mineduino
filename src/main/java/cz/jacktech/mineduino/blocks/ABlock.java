@@ -1,9 +1,8 @@
 package cz.jacktech.mineduino.blocks;
 
 import cz.jacktech.mineduino.MineDuinoMod;
-import cz.jacktech.mineduino.tiles.ETileEntity;
-import cz.jacktech.mineduino.tiles.IEntityRequester;
-import cz.jacktech.mineduino.tiles.old.DigitalInEntity;
+import cz.jacktech.mineduino.entities.ETileEntity;
+import cz.jacktech.mineduino.entities.IEntityRequester;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;

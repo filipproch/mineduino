@@ -1,8 +1,7 @@
 package cz.jacktech.mineduino.gui;
 
 import cpw.mods.fml.common.network.IGuiHandler;
-import cz.jacktech.mineduino.tiles.ETileEntity;
-import cz.jacktech.mineduino.tiles.old.DigitalPinEntity;
+import cz.jacktech.mineduino.entities.ETileEntity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -23,7 +22,9 @@ public class GuiHandler implements IGuiHandler {
     @Override
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
         TileEntity tileEntity = world.getTileEntity(x, y, z);
+        System.out.println("getClientGuiElement");
         if(tileEntity instanceof ETileEntity){
+            System.out.println("ETileEntity");
             ETileEntity eTileEntity = ((ETileEntity) tileEntity);
             switch (eTileEntity.openGui()){
                 case GUI_DIGITAL:

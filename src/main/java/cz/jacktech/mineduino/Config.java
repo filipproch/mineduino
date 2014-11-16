@@ -11,30 +11,22 @@ import java.io.File;
 public class Config {
 
     private static final String SERIAL_PORT = "serial_port";
+
+    private static final String DEFAULT_SERIAL_PORT = "/dev/ttyACM0";
+
     private Configuration conf;
 
     public Config(File suggestedConfigurationFile){
         conf = new Configuration(suggestedConfigurationFile);
         reload();
-        checkConfig();
-    }
-
-    private void checkConfig() {
-        if(getSerialPortProperty().isDefault()){
-            getSerialPortProperty().set("/dev/ttyACM0");
-            conf.save();
-        }
     }
 
     private Property getSerialPortProperty(){
-        return conf.get(Configuration.CATEGORY_GENERAL,SERIAL_PORT, 0,"Serial port of connected Arduino");
+        return conf.get(Configuration.CATEGORY_GENERAL,SERIAL_PORT, DEFAULT_SERIAL_PORT,"Serial port of connected Arduino");
     }
 
     public String getSerialPort(){
         Property port = getSerialPortProperty();
-        if(port.isDefault()){
-            return "/dev/ttyACM0";
-        }
         return port.getString();
     }
 

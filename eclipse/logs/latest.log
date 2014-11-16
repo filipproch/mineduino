@@ -1,71 +1,243 @@
-[17:05:37] [main/INFO]: Extra: []
-[17:05:37] [main/INFO]: Running with arguments: [--userProperties, {}, --assetsDir, /home/toor/.gradle/caches/minecraft/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.GradleStartCommon$GradleStartTweaker]
-[17:05:37] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
-[17:05:37] [main/INFO]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
-[17:05:37] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.GradleStartCommon$GradleStartTweaker
-[17:05:37] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
-[17:05:37] [main/INFO]: Forge Mod Loader version 7.10.85.1236 for Minecraft 1.7.10 loading
-[17:05:37] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_25, running on Linux:amd64:3.13.0-32-generic, installed at /usr/lib/jvm/java-8-oracle/jre
-[17:05:37] [main/INFO]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
-[17:05:37] [main/INFO]: Calling tweak class net.minecraftforge.gradle.GradleStartCommon$GradleStartTweaker
-[17:05:37] [main/INFO]: Injecting location in coremod cpw.mods.fml.relauncher.FMLCorePlugin
-[17:05:37] [main/INFO]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
-[17:05:37] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
-[17:05:37] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLDeobfTweaker
-[17:05:37] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
-[17:05:37] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
-[17:05:37] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
-[17:05:37] [main/ERROR]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
-[17:05:38] [main/ERROR]: FML appears to be missing any signature data. This is not a good thing
-[17:05:38] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
-[17:05:38] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLDeobfTweaker
-[17:05:39] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.TerminalTweaker
-[17:05:39] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.TerminalTweaker
-[17:05:39] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[17:05:40] [main/INFO]: Setting user: Player918
-[17:05:42] [Client thread/INFO]: LWJGL Version: 2.9.1
-[17:05:42] [Client thread/INFO]: [tv.twitch.StandardCoreAPI:<init>:16]: If on Windows, make sure to provide all of the necessary dll's as specified in the twitchsdk README. Also, make sure to set the PATH environment variable to point to the directory containing the dll's.
-[17:05:42] [Client thread/ERROR]: Couldn't initialize twitch stream
-[17:05:43] [Client thread/INFO]: Attempting early MinecraftForge initialization
-[17:05:43] [Client thread/INFO]: MinecraftForge v10.13.2.1236 Initialized
-[17:05:43] [Client thread/INFO]: Replaced 182 ore recipies
-[17:05:43] [Client thread/INFO]: Completed early MinecraftForge initialization
-[17:05:43] [Client thread/INFO]: Searching /home/toor/Dokumenty/projects/mineduino_programming_arduino_in_minecraft/forge/eclipse/mods for mods
-[17:05:47] [Client thread/INFO]: Forge Mod Loader has identified 4 mods to load
-[17:05:47] [Client thread/INFO]: Attempting connection with missing mods [mcp, FML, Forge, mineduino] at CLIENT
-[17:05:47] [Client thread/INFO]: Attempting connection with missing mods [mcp, FML, Forge, mineduino] at SERVER
-[17:05:48] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MineDuino
-[17:05:48] [Client thread/INFO]: Processing ObjectHolder annotations
-[17:05:48] [Client thread/INFO]: Found 341 ObjectHolder annotations
-[17:05:48] [Client thread/INFO]: Configured a dormant chunk cache size of 0
-[17:05:48] [Client thread/INFO]: Applying holder lookups
-[17:05:48] [Client thread/INFO]: Holder lookups applied
-[17:05:48] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[17:05:48] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Starting up SoundSystem...
-[17:05:49] [Thread-6/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Initializing LWJGL OpenAL
-[17:05:49] [Thread-6/INFO]: [paulscode.sound.SoundSystemLogger:message:69]:     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[17:05:49] [Thread-6/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: OpenAL initialized.
-[17:05:49] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[17:05:49] [Sound Library Loader/INFO]: Sound engine started
-[17:05:49] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[17:05:50] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[17:05:50] [Client thread/INFO]: Forge Mod Loader has successfully loaded 4 mods
-[17:05:50] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MineDuino
-[17:05:50] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[17:05:50] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[17:05:50] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[17:05:50] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
-[17:05:50] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
-[17:05:50] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[17:05:50] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[17:05:50] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Starting up SoundSystem...
-[17:05:50] [Thread-8/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Initializing LWJGL OpenAL
-[17:05:50] [Thread-8/INFO]: [paulscode.sound.SoundSystemLogger:message:69]:     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[17:05:50] [Thread-8/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: OpenAL initialized.
-[17:05:51] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[17:05:51] [Sound Library Loader/INFO]: Sound engine started
-[17:06:24] [Client thread/INFO]: Stopping!
-[17:06:24] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[17:06:24] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
-[17:06:24] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
-[17:06:24] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[19:38:20] [main/INFO]: Extra: []
+[19:38:20] [main/INFO]: Running with arguments: [--userProperties, {}, --assetsDir, /home/toor/.gradle/caches/minecraft/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.GradleStartCommon$GradleStartTweaker]
+[19:38:20] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[19:38:20] [main/INFO]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[19:38:20] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.GradleStartCommon$GradleStartTweaker
+[19:38:20] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[19:38:20] [main/INFO]: Forge Mod Loader version 7.10.85.1236 for Minecraft 1.7.10 loading
+[19:38:20] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_25, running on Linux:amd64:3.13.0-32-generic, installed at /usr/lib/jvm/java-8-oracle/jre
+[19:38:20] [main/INFO]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[19:38:20] [main/INFO]: Calling tweak class net.minecraftforge.gradle.GradleStartCommon$GradleStartTweaker
+[19:38:20] [main/INFO]: Injecting location in coremod cpw.mods.fml.relauncher.FMLCorePlugin
+[19:38:20] [main/INFO]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
+[19:38:20] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[19:38:20] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLDeobfTweaker
+[19:38:20] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[19:38:20] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[19:38:20] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[19:38:21] [main/ERROR]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
+[19:38:22] [main/ERROR]: FML appears to be missing any signature data. This is not a good thing
+[19:38:22] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[19:38:22] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLDeobfTweaker
+[19:38:22] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.TerminalTweaker
+[19:38:22] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.TerminalTweaker
+[19:38:22] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[19:38:23] [main/INFO]: Setting user: Player286
+[19:38:25] [Client thread/INFO]: LWJGL Version: 2.9.1
+[19:38:25] [Client thread/INFO]: [tv.twitch.StandardCoreAPI:<init>:16]: If on Windows, make sure to provide all of the necessary dll's as specified in the twitchsdk README. Also, make sure to set the PATH environment variable to point to the directory containing the dll's.
+[19:38:25] [Client thread/ERROR]: Couldn't initialize twitch stream
+[19:38:26] [Client thread/INFO]: Attempting early MinecraftForge initialization
+[19:38:26] [Client thread/INFO]: MinecraftForge v10.13.2.1236 Initialized
+[19:38:26] [Client thread/INFO]: Replaced 182 ore recipies
+[19:38:26] [Client thread/INFO]: Completed early MinecraftForge initialization
+[19:38:26] [Client thread/INFO]: Searching /home/toor/Dokumenty/projects/mineduino_programming_arduino_in_minecraft/forge/eclipse/mods for mods
+[19:38:31] [Client thread/INFO]: Forge Mod Loader has identified 4 mods to load
+[19:38:32] [Client thread/INFO]: Attempting connection with missing mods [mcp, FML, Forge, mineduino] at CLIENT
+[19:38:32] [Client thread/INFO]: Attempting connection with missing mods [mcp, FML, Forge, mineduino] at SERVER
+[19:38:32] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MineDuino
+[19:38:32] [Client thread/INFO]: Processing ObjectHolder annotations
+[19:38:32] [Client thread/INFO]: Found 341 ObjectHolder annotations
+[19:38:33] [Client thread/INFO]: Configured a dormant chunk cache size of 0
+[19:38:33] [Client thread/INFO]: Applying holder lookups
+[19:38:33] [Client thread/INFO]: Holder lookups applied
+[19:38:33] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[19:38:33] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Starting up SoundSystem...
+[19:38:33] [Thread-6/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Initializing LWJGL OpenAL
+[19:38:33] [Thread-6/INFO]: [paulscode.sound.SoundSystemLogger:message:69]:     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[19:38:33] [Thread-6/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: OpenAL initialized.
+[19:38:33] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[19:38:33] [Sound Library Loader/INFO]: Sound engine started
+[19:38:34] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[19:38:34] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[19:38:34] [Client thread/INFO]: Forge Mod Loader has successfully loaded 4 mods
+[19:38:34] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MineDuino
+[19:38:34] [Client thread/ERROR]: Using missing texture, unable to load mineduino:textures/blocks/analogOut.png
+java.io.FileNotFoundException: mineduino:textures/blocks/analogOut.png
+	at net.minecraft.client.resources.FallbackResourceManager.getResource(SourceFile:51) ~[FallbackResourceManager.class:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SourceFile:55) ~[SimpleReloadableResourceManager.class:?]
+	at net.minecraft.client.renderer.texture.TextureMap.loadTextureAtlas(TextureMap.java:125) [TextureMap.class:?]
+	at net.minecraft.client.renderer.texture.TextureMap.loadTexture(TextureMap.java:90) [TextureMap.class:?]
+	at net.minecraft.client.renderer.texture.TextureManager.loadTexture(SourceFile:72) [TextureManager.class:?]
+	at net.minecraft.client.renderer.texture.TextureManager.onResourceManagerReload(SourceFile:136) [TextureManager.class:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.notifyReloadListeners(SourceFile:104) [SimpleReloadableResourceManager.class:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.reloadResources(SourceFile:92) [SimpleReloadableResourceManager.class:?]
+	at net.minecraft.client.Minecraft.refreshResources(Minecraft.java:598) [Minecraft.class:?]
+	at cpw.mods.fml.client.FMLClientHandler.finishMinecraftLoading(FMLClientHandler.java:303) [FMLClientHandler.class:?]
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:541) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:867) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(SourceFile:148) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[?:1.8.0_25]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.11.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78) [start/:?]
+	at GradleStart.main(GradleStart.java:45) [start/:?]
+[19:38:35] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[19:38:35] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[19:38:35] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[19:38:35] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
+[19:38:35] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
+[19:38:35] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[19:38:35] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[19:38:35] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Starting up SoundSystem...
+[19:38:35] [Thread-8/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Initializing LWJGL OpenAL
+[19:38:35] [Thread-8/INFO]: [paulscode.sound.SoundSystemLogger:message:69]:     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[19:38:35] [Thread-8/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: OpenAL initialized.
+[19:38:36] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[19:38:36] [Sound Library Loader/INFO]: Sound engine started
+[19:39:00] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[19:39:00] [Server thread/INFO]: Generating keypair
+[19:39:00] [Server thread/INFO]: Injecting existing block and item data into this server instance
+[19:39:00] [Server thread/INFO]: Applying holder lookups
+[19:39:00] [Server thread/INFO]: Holder lookups applied
+[19:39:00] [Server thread/INFO]: Loading dimension 0 (MineDuino - test) (net.minecraft.server.integrated.IntegratedServer@3b6dc7ef)
+[19:39:01] [Server thread/INFO]: Loading dimension 1 (MineDuino - test) (net.minecraft.server.integrated.IntegratedServer@3b6dc7ef)
+[19:39:01] [Server thread/INFO]: Loading dimension -1 (MineDuino - test) (net.minecraft.server.integrated.IntegratedServer@3b6dc7ef)
+[19:39:01] [Server thread/INFO]: Preparing start region for level 0
+[19:39:01] [Server thread/INFO]: [cz.jacktech.mineduino.MineDuinoMod:serverStart:65]: server started
+[19:39:01] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:connect:39]: SerialManager connecting
+[19:39:01] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:connect:45]: SerialManager connected successfully
+[19:39:01] [Thread-11/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager$1:run:75]: SerialManager starting reader
+[19:39:01] [Thread-11/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager$1:startReader:84]: SerialManager reader started
+[19:39:02] [Server thread/INFO]: Changing view distance to 12, from 10
+[19:39:03] [Netty Client IO #0/INFO]: Server protocol version 1
+[19:39:03] [Netty IO #1/INFO]: Client protocol version 1
+[19:39:03] [Netty IO #1/INFO]: Client attempting to join with 4 mods : FML@7.10.85.1236,Forge@10.13.2.1236,mcp@9.05,mineduino@1.0
+[19:39:03] [Netty IO #1/INFO]: Attempting connection with missing mods [] at CLIENT
+[19:39:03] [Netty Client IO #0/INFO]: Attempting connection with missing mods [] at SERVER
+[19:39:03] [Client thread/INFO]: [Client thread] Client side modded connection established
+[19:39:03] [Server thread/INFO]: [Server thread] Server side modded connection established
+[19:39:03] [Server thread/INFO]: Player286[local:E:ea733d4c] logged in with entity id 147 at (-287.5173917187053, 5.0, 466.4186688152859)
+[19:39:03] [Server thread/INFO]: Player286 joined the game
+[19:39:06] [Server thread/ERROR]: Encountered an unexpected exception
+net.minecraft.util.ReportedException: Ticking memory connection
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:181) ~[NetworkSystem.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:659) ~[MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:547) ~[MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:111) ~[IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:427) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:685) [MinecraftServer$2.class:?]
+Caused by: java.lang.NullPointerException
+	at cz.jacktech.mineduino.entities.PinEntityRequester.getPin(PinEntityRequester.java:16) ~[PinEntityRequester.class:?]
+	at cz.jacktech.mineduino.blocks.output.DigitalOut$1.blockDestroyed(DigitalOut.java:60) ~[DigitalOut$1.class:?]
+	at cz.jacktech.mineduino.blocks.ABlock.blockDestroyed(ABlock.java:76) ~[ABlock.class:?]
+	at cz.jacktech.mineduino.blocks.ABlock.breakBlock(ABlock.java:87) ~[ABlock.class:?]
+	at net.minecraft.world.chunk.Chunk.func_150807_a(Chunk.java:600) ~[Chunk.class:?]
+	at net.minecraft.world.World.setBlock(World.java:451) ~[World.class:?]
+	at net.minecraft.world.World.setBlockToAir(World.java:573) ~[World.class:?]
+	at net.minecraft.block.Block.removedByPlayer(Block.java:1341) ~[Block.class:?]
+	at net.minecraft.block.Block.removedByPlayer(Block.java:1335) ~[Block.class:?]
+	at net.minecraft.server.management.ItemInWorldManager.removeBlock(ItemInWorldManager.java:247) ~[ItemInWorldManager.class:?]
+	at net.minecraft.server.management.ItemInWorldManager.removeBlock(ItemInWorldManager.java:240) ~[ItemInWorldManager.class:?]
+	at net.minecraft.server.management.ItemInWorldManager.tryHarvestBlock(ItemInWorldManager.java:278) ~[ItemInWorldManager.class:?]
+	at net.minecraft.server.management.ItemInWorldManager.onBlockClicked(ItemInWorldManager.java:151) ~[ItemInWorldManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processPlayerDigging(NetHandlerPlayServer.java:489) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.C07PacketPlayerDigging.processPacket(SourceFile:53) ~[C07PacketPlayerDigging.class:?]
+	at net.minecraft.network.play.client.C07PacketPlayerDigging.processPacket(SourceFile:8) ~[C07PacketPlayerDigging.class:?]
+	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:212) ~[NetworkManager.class:?]
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:165) ~[NetworkSystem.class:?]
+	... 5 more
+[19:39:06] [Server thread/ERROR]: This crash report has been saved to: /home/toor/Dokumenty/projects/mineduino_programming_arduino_in_minecraft/forge/eclipse/./crash-reports/crash-2014-11-16_19.39.06-server.txt
+[19:39:06] [Server thread/INFO]: Stopping server
+[19:39:06] [Server thread/INFO]: Saving players
+[19:39:06] [Client thread/INFO]: [net.minecraft.client.Minecraft:displayCrashReport:349]: ---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 16.11.14 19:39
+Description: Ticking memory connection
+
+java.lang.NullPointerException: Ticking memory connection
+	at cz.jacktech.mineduino.entities.PinEntityRequester.getPin(PinEntityRequester.java:16)
+	at cz.jacktech.mineduino.blocks.output.DigitalOut$1.blockDestroyed(DigitalOut.java:60)
+	at cz.jacktech.mineduino.blocks.ABlock.blockDestroyed(ABlock.java:76)
+	at cz.jacktech.mineduino.blocks.ABlock.breakBlock(ABlock.java:87)
+	at net.minecraft.world.chunk.Chunk.func_150807_a(Chunk.java:600)
+	at net.minecraft.world.World.setBlock(World.java:451)
+	at net.minecraft.world.World.setBlockToAir(World.java:573)
+	at net.minecraft.block.Block.removedByPlayer(Block.java:1341)
+	at net.minecraft.block.Block.removedByPlayer(Block.java:1335)
+	at net.minecraft.server.management.ItemInWorldManager.removeBlock(ItemInWorldManager.java:247)
+	at net.minecraft.server.management.ItemInWorldManager.removeBlock(ItemInWorldManager.java:240)
+	at net.minecraft.server.management.ItemInWorldManager.tryHarvestBlock(ItemInWorldManager.java:278)
+	at net.minecraft.server.management.ItemInWorldManager.onBlockClicked(ItemInWorldManager.java:151)
+	at net.minecraft.network.NetHandlerPlayServer.processPlayerDigging(NetHandlerPlayServer.java:489)
+	at net.minecraft.network.play.client.C07PacketPlayerDigging.processPacket(SourceFile:53)
+	at net.minecraft.network.play.client.C07PacketPlayerDigging.processPacket(SourceFile:8)
+	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:212)
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:165)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:659)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:547)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:111)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:427)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:685)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at cz.jacktech.mineduino.entities.PinEntityRequester.getPin(PinEntityRequester.java:16)
+	at cz.jacktech.mineduino.blocks.output.DigitalOut$1.blockDestroyed(DigitalOut.java:60)
+	at cz.jacktech.mineduino.blocks.ABlock.blockDestroyed(ABlock.java:76)
+	at cz.jacktech.mineduino.blocks.ABlock.breakBlock(ABlock.java:87)
+	at net.minecraft.world.chunk.Chunk.func_150807_a(Chunk.java:600)
+	at net.minecraft.world.World.setBlock(World.java:451)
+	at net.minecraft.world.World.setBlockToAir(World.java:573)
+	at net.minecraft.block.Block.removedByPlayer(Block.java:1341)
+	at net.minecraft.block.Block.removedByPlayer(Block.java:1335)
+	at net.minecraft.server.management.ItemInWorldManager.removeBlock(ItemInWorldManager.java:247)
+	at net.minecraft.server.management.ItemInWorldManager.removeBlock(ItemInWorldManager.java:240)
+	at net.minecraft.server.management.ItemInWorldManager.tryHarvestBlock(ItemInWorldManager.java:278)
+	at net.minecraft.server.management.ItemInWorldManager.onBlockClicked(ItemInWorldManager.java:151)
+	at net.minecraft.network.NetHandlerPlayServer.processPlayerDigging(NetHandlerPlayServer.java:489)
+	at net.minecraft.network.play.client.C07PacketPlayerDigging.processPacket(SourceFile:53)
+	at net.minecraft.network.play.client.C07PacketPlayerDigging.processPacket(SourceFile:8)
+	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:212)
+
+-- Ticking connection --
+Details:
+	Connection: net.minecraft.network.NetworkManager@1cbf8488
+Stacktrace:
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:165)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:659)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:547)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:111)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:427)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:685)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Linux (amd64) version 3.13.0-32-generic
+	Java Version: 1.8.0_25, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 123242848 bytes (117 MB) / 319291392 bytes (304 MB) up to 880279552 bytes (839 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.85.1236 Minecraft Forge 10.13.2.1236 4 mods loaded, 4 mods active
+	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{7.10.85.1236} [Forge Mod Loader] (forgeBin-1.7.10-10.13.2.1236.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{10.13.2.1236} [Minecraft Forge] (forgeBin-1.7.10-10.13.2.1236.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	mineduino{1.0} [MineDuino] (mineduino-1.0.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 1 / 8; [EntityPlayerMP['Player286'/147, l='MineDuino - test', x=-287,52, y=5,00, z=466,42]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+[19:39:06] [Client thread/INFO]: [net.minecraft.client.Minecraft:displayCrashReport:354]: #@!@# Game crashed! Crash report saved to: #@!@# ./crash-reports/crash-2014-11-16_19.39.06-server.txt
+[19:39:06] [Client thread/INFO]: Waiting for the server to terminate/save.
+[19:39:07] [Server thread/INFO]: Saving worlds
+[19:39:07] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/Overworld
+[19:39:07] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/Nether
+[19:39:07] [Server thread/INFO]: Saving chunks for level 'MineDuino - test'/The End
+[19:39:08] [Server thread/INFO]: Unloading dimension 0
+[19:39:08] [Server thread/INFO]: Unloading dimension -1
+[19:39:08] [Server thread/INFO]: Unloading dimension 1
+[19:39:08] [Server thread/INFO]: Applying holder lookups
+[19:39:08] [Server thread/INFO]: Holder lookups applied
+[19:39:08] [Server thread/INFO]: The state engine was in incorrect state SERVER_STOPPING and forced into state SERVER_STOPPED. Errors may have been discarded.
+[19:39:08] [Client thread/INFO]: Server terminated.

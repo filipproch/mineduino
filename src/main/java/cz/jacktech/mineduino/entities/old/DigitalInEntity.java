@@ -1,6 +1,5 @@
-package cz.jacktech.mineduino.tiles.old;
+package cz.jacktech.mineduino.entities.old;
 
-import cz.jacktech.mineduino.serialiface.SerialManager;
 import net.minecraft.nbt.NBTTagCompound;
 
 /**

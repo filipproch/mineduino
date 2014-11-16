@@ -1,5 +1,8 @@
-package cz.jacktech.mineduino.tiles;
+package cz.jacktech.mineduino.entities.tiles;
 
+import cz.jacktech.mineduino.entities.ETileEntity;
+import cz.jacktech.mineduino.entities.EntityValueStore;
+import cz.jacktech.mineduino.entities.IEntityRequester;
 import net.minecraft.nbt.NBTTagCompound;
 
 /**

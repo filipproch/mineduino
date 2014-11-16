@@ -1,4 +1,4 @@
-package cz.jacktech.mineduino.tiles;
+package cz.jacktech.mineduino.entities;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
@@ -11,10 +11,13 @@ import net.minecraft.tileentity.TileEntity;
  */
 public class ETileEntity extends TileEntity{
 
-    private IEntityRequester requester;
+    private final IEntityRequester requester;
+    private final EntityValueStore valueStore;
 
     public ETileEntity(IEntityRequester requester) {
         this.requester = requester;
+        this.valueStore = new EntityValueStore();
+        requester.create(this);
     }
 
     @Override
@@ -46,4 +49,7 @@ public class ETileEntity extends TileEntity{
         return 0;
     }
 
+    public EntityValueStore getValueStore() {
+        return valueStore;
+    }
 }

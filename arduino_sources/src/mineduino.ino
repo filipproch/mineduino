@@ -40,7 +40,6 @@ int * analogPinsStatus = new int[ANALOG_PINS];
 void setup(){
   Serial.begin(9600);
   currentCommand.reserve(100);
-  printSupportedPins();
   setupPins();
 }
 
@@ -89,6 +88,9 @@ void readCommand(){
                 writeDigital(nextSegmentInt(), nextSegmentInt());
                 break;
         }
+    }else if(line == "connected"){
+        printSupportedPins();
+        setupPins();
     }
 
     commandReceived = false;

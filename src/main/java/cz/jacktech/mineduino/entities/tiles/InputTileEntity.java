@@ -1,10 +1,9 @@
-package cz.jacktech.mineduino.tiles;
+package cz.jacktech.mineduino.entities.tiles;
 
+import cz.jacktech.mineduino.entities.ETileEntity;
+import cz.jacktech.mineduino.entities.EntityValueStore;
+import cz.jacktech.mineduino.entities.IEntityRequester;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.network.NetworkManager;
-import net.minecraft.network.Packet;
-import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
-import net.minecraft.tileentity.TileEntity;
 
 /**
  * Created by toor on 15.11.14.

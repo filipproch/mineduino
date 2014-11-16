@@ -11,6 +11,7 @@ import static cz.jacktech.mineduino.serialiface.SerialManager.*;
 public class ArduinoDigitalPin extends ArduinoPin{
 
     public boolean status = false;
+
     public boolean assigned = false;
     public PinMode pinType = PinMode.OUTPUT;
     public int value = 0;
@@ -60,4 +61,15 @@ public class ArduinoDigitalPin extends ArduinoPin{
         SerialManager.getInstance().setupPin(this, pinMode);
     }
 
+    public void reset() {
+        updateMode(PinMode.OUTPUT);
+        disable();
+    }
+
+    public void update(boolean enabled) {
+        if(enabled)
+            enable();
+        else
+            disable();
+    }
 }

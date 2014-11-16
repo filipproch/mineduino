@@ -3,7 +3,7 @@ package cz.jacktech.mineduino.synch;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
-import cz.jacktech.mineduino.tiles.old.DigitalPinEntity;
+import cz.jacktech.mineduino.entities.old.DigitalPinEntity;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.tileentity.TileEntity;
 

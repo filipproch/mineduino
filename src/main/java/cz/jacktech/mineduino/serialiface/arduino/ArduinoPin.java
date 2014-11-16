@@ -11,6 +11,14 @@ public abstract class ArduinoPin {
         this.pinNumber = pinNumber;
     }
 
+    public static ArduinoPin create(int pinNumber, int pinValue, boolean analogPin) {
+        if(analogPin){
+            return new ArduinoAnalogPin(pinNumber, pinValue);
+        }else{
+            return new ArduinoDigitalPin(pinNumber, pinValue == 1);
+        }
+    }
+
     public static enum PinMode{
         INPUT, OUTPUT, ANALOG_OUTPUT, ANALOG_INPUT;
     }
