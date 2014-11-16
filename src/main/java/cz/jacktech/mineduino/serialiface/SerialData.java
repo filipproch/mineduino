@@ -12,7 +12,7 @@ public class SerialData {
     }
 
     private void parse(String received) {
-        mDataArray = received.replace("#", "").replace("$", "").split(";");
+        mDataArray = received.split("/");
     }
 
     public String get(int position){
@@ -20,10 +20,7 @@ public class SerialData {
     }
 
     public int getInt(int position){
-        try{
-            return Integer.parseInt(mDataArray[position]);
-        }catch (Exception e){}
-        return 0;
+        return Integer.parseInt(mDataArray[position]);
     }
 
     public float getFloat(int position){

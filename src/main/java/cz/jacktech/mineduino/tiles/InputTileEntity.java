@@ -9,10 +9,16 @@ import net.minecraft.tileentity.TileEntity;
 /**
  * Created by toor on 15.11.14.
  */
-public class InputTileEntity extends TileEntity {
+public class InputTileEntity extends ETileEntity {
 
+    public static final String ENTITY_NAME = InputTileEntity.class.getSimpleName();
     private static final String INPUT_NAME = "InputName";
+
     private String inputName;
+
+    public InputTileEntity(IEntityRequester requester) {
+        super(requester);
+    }
 
     @Override
     public void writeToNBT(NBTTagCompound nbttag) {
@@ -26,29 +32,12 @@ public class InputTileEntity extends TileEntity {
         setInputName(nbttag.getString(INPUT_NAME));
     }
 
-    @Override
-    public Packet getDescriptionPacket(){
-        NBTTagCompound tag = new NBTTagCompound();
-        writeToNBT(tag);
-        return new S35PacketUpdateTileEntity(xCoord, yCoord, zCoord, 0, tag);
-    }
-
-    @Override
-    public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity pkt) {
-        readFromNBT(pkt.func_148857_g());
-    }
-
     public String getInputName() {
         return inputName;
     }
 
     public void setInputName(String inputName) {
         this.inputName = inputName;
-    }
-
-    public void markForUpdate() {
-        worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
-        markDirty();
     }
 
 }

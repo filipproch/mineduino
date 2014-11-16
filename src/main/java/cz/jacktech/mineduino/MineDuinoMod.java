@@ -2,6 +2,7 @@ package cz.jacktech.mineduino;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartedEvent;
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
@@ -15,9 +16,8 @@ import cz.jacktech.mineduino.blocks.output.DigitalOut;
 import cz.jacktech.mineduino.gui.GuiHandler;
 import cz.jacktech.mineduino.serialiface.SerialManager;
 import cz.jacktech.mineduino.synch.DigitalPinSyncMessage;
-import cz.jacktech.mineduino.tiles.AnalogOutEntity;
-import cz.jacktech.mineduino.tiles.DigitalInEntity;
-import cz.jacktech.mineduino.tiles.DigitalOutEntity;
+import cz.jacktech.mineduino.tiles.InputTileEntity;
+import cz.jacktech.mineduino.tiles.OutputTileEntity;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -36,18 +36,27 @@ public class MineDuinoMod {
     public static DigitalOut blockDigitalOut;
     public static AnalogOut blockAnalogOut;
 
+    public Config config;
+
     public MineDuinoMod() {
         instance = this;
     }
 
     @Mod.EventHandler
+    public void preInit(FMLPreInitializationEvent event){
+        config = new Config(event.getSuggestedConfigurationFile());
+    }
+
+    @Mod.EventHandler
     public void init(FMLInitializationEvent event){
-        GameRegistry.registerBlock(blockDigitalIn = new DigitalIn(), DigitalIn.BLOCK_NAME);
+        /*GameRegistry.registerBlock(blockDigitalIn = new DigitalIn(), DigitalIn.BLOCK_NAME);
         GameRegistry.registerBlock(blockDigitalOut = new DigitalOut(), DigitalOut.BLOCK_NAME);
         GameRegistry.registerBlock(blockAnalogOut = new AnalogOut(), AnalogOut.BLOCK_NAME);
         GameRegistry.registerTileEntity(DigitalInEntity.class, DigitalInEntity.ENTITY_NAME);
         GameRegistry.registerTileEntity(DigitalOutEntity.class, DigitalOutEntity.ENTITY_NAME);
-        GameRegistry.registerTileEntity(AnalogOutEntity.class, AnalogOutEntity.ENTITY_NAME);
+        GameRegistry.registerTileEntity(AnalogOutEntity.class, AnalogOutEntity.ENTITY_NAME);*/
+        GameRegistry.registerTileEntity(InputTileEntity.class, InputTileEntity.ENTITY_NAME);
+        GameRegistry.registerTileEntity(OutputTileEntity.class, OutputTileEntity.ENTITY_NAME);
 
         NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 

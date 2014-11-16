@@ -2,8 +2,7 @@ package cz.jacktech.mineduino.blocks.output;
 
 import cz.jacktech.mineduino.MineDuinoMod;
 import cz.jacktech.mineduino.serialiface.SerialManager;
-import cz.jacktech.mineduino.tiles.AnalogOutEntity;
-import cz.jacktech.mineduino.tiles.DigitalOutEntity;
+import cz.jacktech.mineduino.tiles.old.AnalogOutEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -50,7 +49,7 @@ public class AnalogOut extends BlockContainer{
     }
 
     private void updatePoweredState(World world, int x, int y, int z){
-        if(!world.isRemote) {
+        /*if(!world.isRemote) {
             TileEntity tileEntity = world.getTileEntity(x, y, z);
             //System.out.println("update powered state");
             if (tileEntity != null && tileEntity instanceof AnalogOutEntity) {
@@ -71,7 +70,7 @@ public class AnalogOut extends BlockContainer{
                     //System.out.println("cmd send " + cmdSuccess);
                 }
             }
-        }
+        }*/
     }
 
     @Override

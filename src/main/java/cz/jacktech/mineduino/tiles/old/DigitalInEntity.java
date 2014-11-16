@@ -1,12 +1,7 @@
-package cz.jacktech.mineduino.tiles;
+package cz.jacktech.mineduino.tiles.old;
 
 import cz.jacktech.mineduino.serialiface.SerialManager;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.network.NetworkManager;
-import net.minecraft.network.Packet;
-import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
 
 /**
  * Created by toor on 11.11.14.
@@ -21,11 +16,11 @@ public class DigitalInEntity extends DigitalPinEntity {
     public void updateEntity() {
         if(!getWorldObj().isRemote){
             if(getArduinoPin() != -1) {
-                boolean currentStatus = SerialManager.getInstance().getPinStatus(getArduinoPin());
+                /*boolean currentStatus = SerialManager.getInstance().getPinStatus(getArduinoPin());
                 if(currentStatus != isProvidingPower) {
                     isProvidingPower = currentStatus;
                     notifySurroundingBlocks();
-                }
+                }*/
                 //System.out.println("Current status ("+getArduinoPin()+"): "+currentStatus);
             }
         }
@@ -51,6 +46,6 @@ public class DigitalInEntity extends DigitalPinEntity {
     @Override
     public void setArduinoPin(int arduinoPin) {
         super.setArduinoPin(arduinoPin);
-        SerialManager.getInstance().setupInput(arduinoPin);
+        //SerialManager.getInstance().setupInput(arduinoPin);
     }
 }

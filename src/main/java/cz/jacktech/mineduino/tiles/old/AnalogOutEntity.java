@@ -1,4 +1,4 @@
-package cz.jacktech.mineduino.tiles;
+package cz.jacktech.mineduino.tiles.old;
 
 /**
  * Created by toor on 13.11.14.

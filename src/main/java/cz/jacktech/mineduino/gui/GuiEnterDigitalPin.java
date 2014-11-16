@@ -2,13 +2,11 @@ package cz.jacktech.mineduino.gui;
 
 import cz.jacktech.mineduino.MineDuinoMod;
 import cz.jacktech.mineduino.synch.DigitalPinSyncMessage;
-import cz.jacktech.mineduino.tiles.DigitalPinEntity;
+import cz.jacktech.mineduino.tiles.ETileEntity;
+import cz.jacktech.mineduino.tiles.old.DigitalPinEntity;
 import net.minecraft.client.gui.GuiButton;
-import net.minecraft.client.gui.GuiLabel;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.client.gui.GuiTextField;
 import net.minecraft.client.resources.I18n;
-import org.lwjgl.input.Keyboard;
 
 /**
  * Created by toor on 11.11.14.
@@ -17,7 +15,7 @@ public class GuiEnterDigitalPin extends GuiScreen {
 
     //private GuiTextField commandTextField;
 
-    private final DigitalPinEntity tileEntity;
+    private final ETileEntity tileEntity;
 
     private GuiButton doneBtn;
     private GuiButton cancelBtn;
@@ -26,7 +24,7 @@ public class GuiEnterDigitalPin extends GuiScreen {
 
     private int arduinoPin = 0;
 
-    public GuiEnterDigitalPin(DigitalPinEntity tileEntity) {
+    public GuiEnterDigitalPin(ETileEntity tileEntity) {
         this.tileEntity = tileEntity;
     }
 
@@ -44,7 +42,7 @@ public class GuiEnterDigitalPin extends GuiScreen {
         this.commandTextField.setFocused(true);
         if(tileEntity.getArduinoPin() != -1)
             this.commandTextField.setText(String.valueOf(tileEntity.getArduinoPin()));*/
-        arduinoPin = tileEntity.getArduinoPin();
+        //arduinoPin = tileEntity.getArduinoPin();
 
         //this.doneBtn.enabled = this.commandTextField.getText().trim().length() > 0;
     }
@@ -55,8 +53,8 @@ public class GuiEnterDigitalPin extends GuiScreen {
             switch (button.id){
                 case 0: //done button
                     try{
-                        tileEntity.setArduinoPin(arduinoPin);
-                        MineDuinoMod.INSTANCE.sendToServer(new DigitalPinSyncMessage().setup(tileEntity));
+                        //tileEntity.setArduinoPin(arduinoPin);
+                        //MineDuinoMod.INSTANCE.sendToServer(new DigitalPinSyncMessage().setup(tileEntity));
                     }catch (Exception exception){
                         exception.printStackTrace();
                     }

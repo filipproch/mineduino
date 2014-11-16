@@ -1,4 +1,4 @@
-package cz.jacktech.mineduino.tiles;
+package cz.jacktech.mineduino.tiles.old;
 
 import cz.jacktech.mineduino.serialiface.SerialManager;
 
@@ -12,6 +12,6 @@ public class DigitalOutEntity extends DigitalPinEntity {
     @Override
     public void setArduinoPin(int arduinoPin) {
         super.setArduinoPin(arduinoPin);
-        SerialManager.getInstance().setupOutput(arduinoPin);
+        //SerialManager.getInstance().setupOutput(arduinoPin);
     }
 }
