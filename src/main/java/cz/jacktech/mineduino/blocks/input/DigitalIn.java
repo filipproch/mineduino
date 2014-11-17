@@ -7,6 +7,8 @@ import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
+import java.util.Random;
+
 /**
  * Created by toor on 11.11.14.
  */

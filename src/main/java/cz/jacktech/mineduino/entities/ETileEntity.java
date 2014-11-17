@@ -35,6 +35,7 @@ public abstract class ETileEntity extends TileEntity{
 
     public void markForUpdate() {
         worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
+        worldObj.notifyBlockOfNeighborChange(xCoord, yCoord, zCoord, null);
         markDirty();
     }
 
