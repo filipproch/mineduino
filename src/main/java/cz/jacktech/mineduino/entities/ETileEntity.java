@@ -33,9 +33,13 @@ public abstract class ETileEntity extends TileEntity{
         readFromNBT(pkt.func_148857_g());
     }
 
+    public void notifyNeighbourBlocks() {
+        worldObj.notifyBlocksOfNeighborChange(xCoord, yCoord, zCoord, getBlockType());
+        markForUpdate();
+    }
+
     public void markForUpdate() {
         worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
-        worldObj.notifyBlockOfNeighborChange(xCoord, yCoord, zCoord, null);
         markDirty();
     }
 

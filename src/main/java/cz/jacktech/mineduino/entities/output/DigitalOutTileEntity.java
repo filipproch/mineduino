@@ -2,6 +2,7 @@ package cz.jacktech.mineduino.entities.output;
 
 import cz.jacktech.mineduino.core.MineduinoLogger;
 import cz.jacktech.mineduino.entities.ETileEntity;
+import cz.jacktech.mineduino.entities.OutputTileEntity;
 import cz.jacktech.mineduino.gui.GuiHandler;
 import cz.jacktech.mineduino.serialiface.SerialManager;
 import cz.jacktech.mineduino.serialiface.arduino.ArduinoDigitalPin;
@@ -11,7 +12,7 @@ import net.minecraft.nbt.NBTTagCompound;
 /**
  * Created by toor on 17.11.14.
  */
-public class DigitalOutTileEntity extends ETileEntity {
+public class DigitalOutTileEntity extends OutputTileEntity {
 
     public static final String ENTITY_NAME = DigitalOutTileEntity.class.getSimpleName();
 
@@ -89,5 +90,10 @@ public class DigitalOutTileEntity extends ETileEntity {
 
     public int getArduinoPinNumber() {
         return arduinoPinNumber;
+    }
+
+    @Override
+    public void sendOutput(Object object) {
+        //unsupported, only redstone possible ??
     }
 }

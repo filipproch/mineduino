@@ -1,57 +1,57 @@
-[22:07:50] [main/INFO]: Extra: []
-[22:07:50] [main/INFO]: Running with arguments: [--userProperties, {}, --assetsDir, /home/toor/.gradle/caches/minecraft/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.GradleStartCommon$GradleStartTweaker]
-[22:07:50] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
-[22:07:50] [main/INFO]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
-[22:07:50] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.GradleStartCommon$GradleStartTweaker
-[22:07:50] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
-[22:07:50] [main/INFO]: Forge Mod Loader version 7.10.85.1236 for Minecraft 1.7.10 loading
-[22:07:50] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_25, running on Linux:amd64:3.13.0-39-generic, installed at /usr/lib/jvm/java-8-oracle/jre
-[22:07:50] [main/INFO]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
-[22:07:50] [main/INFO]: Calling tweak class net.minecraftforge.gradle.GradleStartCommon$GradleStartTweaker
-[22:07:50] [main/INFO]: Injecting location in coremod cpw.mods.fml.relauncher.FMLCorePlugin
-[22:07:50] [main/INFO]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
-[22:07:50] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
-[22:07:50] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLDeobfTweaker
-[22:07:50] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
-[22:07:50] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
-[22:07:50] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
-[22:07:51] [main/ERROR]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
-[22:07:51] [main/ERROR]: FML appears to be missing any signature data. This is not a good thing
-[22:07:51] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
-[22:07:51] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLDeobfTweaker
-[22:07:51] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.TerminalTweaker
-[22:07:51] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.TerminalTweaker
-[22:07:52] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[22:07:53] [main/INFO]: Setting user: Player816
-[22:07:54] [Client thread/INFO]: LWJGL Version: 2.9.1
-[22:07:55] [Client thread/INFO]: [tv.twitch.StandardCoreAPI:<init>:16]: If on Windows, make sure to provide all of the necessary dll's as specified in the twitchsdk README. Also, make sure to set the PATH environment variable to point to the directory containing the dll's.
-[22:07:55] [Client thread/ERROR]: Couldn't initialize twitch stream
-[22:07:56] [Client thread/INFO]: Attempting early MinecraftForge initialization
-[22:07:56] [Client thread/INFO]: MinecraftForge v10.13.2.1236 Initialized
-[22:07:56] [Client thread/INFO]: Replaced 182 ore recipies
-[22:07:56] [Client thread/INFO]: Completed early MinecraftForge initialization
-[22:07:57] [Client thread/INFO]: Searching /home/toor/Dokumenty/projects/mineduino_programming_arduino_in_minecraft/forge/eclipse/mods for mods
-[22:08:01] [Client thread/INFO]: Forge Mod Loader has identified 4 mods to load
-[22:08:01] [Client thread/INFO]: Attempting connection with missing mods [mcp, FML, Forge, mineduino] at CLIENT
-[22:08:01] [Client thread/INFO]: Attempting connection with missing mods [mcp, FML, Forge, mineduino] at SERVER
-[22:08:02] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MineDuino
-[22:08:02] [Client thread/INFO]: Processing ObjectHolder annotations
-[22:08:02] [Client thread/INFO]: Found 341 ObjectHolder annotations
-[22:08:02] [Client thread/INFO]: Configured a dormant chunk cache size of 0
-[22:08:02] [Client thread/INFO]: Applying holder lookups
-[22:08:02] [Client thread/INFO]: Holder lookups applied
-[22:08:02] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[22:08:02] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Starting up SoundSystem...
-[22:08:02] [Thread-6/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Initializing LWJGL OpenAL
-[22:08:02] [Thread-6/INFO]: [paulscode.sound.SoundSystemLogger:message:69]:     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[22:08:03] [Thread-6/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: OpenAL initialized.
-[22:08:03] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[22:08:03] [Sound Library Loader/INFO]: Sound engine started
-[22:08:03] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[22:08:03] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[22:08:04] [Client thread/INFO]: Forge Mod Loader has successfully loaded 4 mods
-[22:08:04] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MineDuino
-[22:08:04] [Client thread/ERROR]: Using missing texture, unable to load mineduino:textures/blocks/analogOut.png
+[22:14:53] [main/INFO]: Extra: []
+[22:14:53] [main/INFO]: Running with arguments: [--userProperties, {}, --assetsDir, /home/toor/.gradle/caches/minecraft/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.GradleStartCommon$GradleStartTweaker]
+[22:14:53] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[22:14:53] [main/INFO]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[22:14:53] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.GradleStartCommon$GradleStartTweaker
+[22:14:53] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[22:14:53] [main/INFO]: Forge Mod Loader version 7.10.85.1236 for Minecraft 1.7.10 loading
+[22:14:53] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_25, running on Linux:amd64:3.13.0-39-generic, installed at /usr/lib/jvm/java-8-oracle/jre
+[22:14:53] [main/INFO]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[22:14:53] [main/INFO]: Calling tweak class net.minecraftforge.gradle.GradleStartCommon$GradleStartTweaker
+[22:14:53] [main/INFO]: Injecting location in coremod cpw.mods.fml.relauncher.FMLCorePlugin
+[22:14:53] [main/INFO]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
+[22:14:53] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[22:14:53] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLDeobfTweaker
+[22:14:53] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[22:14:53] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[22:14:53] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[22:14:53] [main/ERROR]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
+[22:14:54] [main/ERROR]: FML appears to be missing any signature data. This is not a good thing
+[22:14:54] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[22:14:54] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLDeobfTweaker
+[22:14:54] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.TerminalTweaker
+[22:14:54] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.TerminalTweaker
+[22:14:54] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[22:14:56] [main/INFO]: Setting user: Player614
+[22:14:57] [Client thread/INFO]: LWJGL Version: 2.9.1
+[22:14:57] [Client thread/INFO]: [tv.twitch.StandardCoreAPI:<init>:16]: If on Windows, make sure to provide all of the necessary dll's as specified in the twitchsdk README. Also, make sure to set the PATH environment variable to point to the directory containing the dll's.
+[22:14:57] [Client thread/ERROR]: Couldn't initialize twitch stream
+[22:14:58] [Client thread/INFO]: Attempting early MinecraftForge initialization
+[22:14:58] [Client thread/INFO]: MinecraftForge v10.13.2.1236 Initialized
+[22:14:58] [Client thread/INFO]: Replaced 182 ore recipies
+[22:14:58] [Client thread/INFO]: Completed early MinecraftForge initialization
+[22:14:58] [Client thread/INFO]: Searching /home/toor/Dokumenty/projects/mineduino_programming_arduino_in_minecraft/forge/eclipse/mods for mods
+[22:15:02] [Client thread/INFO]: Forge Mod Loader has identified 4 mods to load
+[22:15:02] [Client thread/INFO]: Attempting connection with missing mods [mcp, FML, Forge, mineduino] at CLIENT
+[22:15:02] [Client thread/INFO]: Attempting connection with missing mods [mcp, FML, Forge, mineduino] at SERVER
+[22:15:03] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MineDuino
+[22:15:03] [Client thread/INFO]: Processing ObjectHolder annotations
+[22:15:03] [Client thread/INFO]: Found 341 ObjectHolder annotations
+[22:15:03] [Client thread/INFO]: Configured a dormant chunk cache size of 0
+[22:15:03] [Client thread/INFO]: Applying holder lookups
+[22:15:03] [Client thread/INFO]: Holder lookups applied
+[22:15:03] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[22:15:03] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Starting up SoundSystem...
+[22:15:03] [Thread-6/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Initializing LWJGL OpenAL
+[22:15:03] [Thread-6/INFO]: [paulscode.sound.SoundSystemLogger:message:69]:     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[22:15:03] [Thread-6/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: OpenAL initialized.
+[22:15:04] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[22:15:04] [Sound Library Loader/INFO]: Sound engine started
+[22:15:04] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[22:15:04] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[22:15:04] [Client thread/INFO]: Forge Mod Loader has successfully loaded 4 mods
+[22:15:04] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MineDuino
+[22:15:05] [Client thread/ERROR]: Using missing texture, unable to load mineduino:textures/blocks/analogOut.png
 java.io.FileNotFoundException: mineduino:textures/blocks/analogOut.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(SourceFile:51) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SourceFile:55) ~[SimpleReloadableResourceManager.class:?]
@@ -74,81 +74,563 @@ java.io.FileNotFoundException: mineduino:textures/blocks/analogOut.png
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78) [start/:?]
 	at GradleStart.main(GradleStart.java:45) [start/:?]
-[22:08:04] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[22:08:04] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[22:08:04] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[22:08:04] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
-[22:08:04] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
-[22:08:04] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[22:08:04] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[22:08:04] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Starting up SoundSystem...
-[22:08:04] [Thread-8/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Initializing LWJGL OpenAL
-[22:08:04] [Thread-8/INFO]: [paulscode.sound.SoundSystemLogger:message:69]:     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[22:08:04] [Thread-8/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: OpenAL initialized.
-[22:08:05] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[22:08:05] [Sound Library Loader/INFO]: Sound engine started
-[22:08:08] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[22:08:08] [Server thread/INFO]: Generating keypair
-[22:08:08] [Server thread/INFO]: Injecting existing block and item data into this server instance
-[22:08:08] [Server thread/INFO]: Applying holder lookups
-[22:08:08] [Server thread/INFO]: Holder lookups applied
-[22:08:08] [Server thread/INFO]: Loading dimension 0 (MineDuino) (net.minecraft.server.integrated.IntegratedServer@6d51d881)
-[22:08:09] [Server thread/INFO]: Loading dimension 1 (MineDuino) (net.minecraft.server.integrated.IntegratedServer@6d51d881)
-[22:08:09] [Server thread/INFO]: Loading dimension -1 (MineDuino) (net.minecraft.server.integrated.IntegratedServer@6d51d881)
-[22:08:09] [Server thread/INFO]: Preparing start region for level 0
-[22:08:10] [Server thread/INFO]: Preparing spawn area: 40%
-[22:08:11] [Server thread/INFO]: Preparing spawn area: 78%
-[22:08:12] [Server thread/INFO]: Preparing spawn area: 99%
-[22:08:13] [Server thread/INFO]: [cz.jacktech.mineduino.MineDuinoMod:serverStart:65]: server started
-[22:08:13] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:connect:44]: SerialManager connecting
-[22:08:13] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:connect:55]: SerialManager reader started
-[22:08:13] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:connect:58]: SerialManager connected successfully
-[22:08:13] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:connect:59]: Serial pins: 0
-[22:08:13] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/in/8
+[22:15:05] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[22:15:05] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[22:15:05] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[22:15:05] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
+[22:15:05] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
+[22:15:05] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[22:15:05] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[22:15:05] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Starting up SoundSystem...
+[22:15:05] [Thread-8/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Initializing LWJGL OpenAL
+[22:15:05] [Thread-8/INFO]: [paulscode.sound.SoundSystemLogger:message:69]:     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[22:15:05] [Thread-8/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: OpenAL initialized.
+[22:15:06] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[22:15:06] [Sound Library Loader/INFO]: Sound engine started
+[22:15:14] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[22:15:14] [Server thread/INFO]: Generating keypair
+[22:15:14] [Server thread/INFO]: Injecting existing block and item data into this server instance
+[22:15:14] [Server thread/INFO]: Applying holder lookups
+[22:15:14] [Server thread/INFO]: Holder lookups applied
+[22:15:14] [Server thread/INFO]: Loading dimension 0 (MineDuino) (net.minecraft.server.integrated.IntegratedServer@4811bac4)
+[22:15:14] [Server thread/INFO]: Loading dimension 1 (MineDuino) (net.minecraft.server.integrated.IntegratedServer@4811bac4)
+[22:15:14] [Server thread/INFO]: Loading dimension -1 (MineDuino) (net.minecraft.server.integrated.IntegratedServer@4811bac4)
+[22:15:14] [Server thread/INFO]: Preparing start region for level 0
+[22:15:15] [Server thread/INFO]: Preparing spawn area: 32%
+[22:15:16] [Server thread/INFO]: Preparing spawn area: 59%
+[22:15:17] [Server thread/INFO]: [cz.jacktech.mineduino.MineDuinoMod:serverStart:65]: server started
+[22:15:17] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:connect:44]: SerialManager connecting
+[22:15:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:connect:55]: SerialManager reader started
+[22:15:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:connect:58]: SerialManager connected successfully
+[22:15:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:connect:59]: Serial pins: 0
+[22:15:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/in/8
 
-[22:08:13] [Server thread/INFO]: Changing view distance to 12, from 10
-[22:08:13] [EventThread /dev/ttyUSB0/INFO]: adding 14 digital pins
-[22:08:13] [EventThread /dev/ttyUSB0/INFO]: adding 16 analog pins
-[22:08:14] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/5
+[22:15:18] [Server thread/INFO]: Changing view distance to 12, from 10
+[22:15:18] [EventThread /dev/ttyUSB0/INFO]: adding 14 digital pins
+[22:15:18] [EventThread /dev/ttyUSB0/INFO]: adding 16 analog pins
+[22:15:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/5
 
-[22:08:14] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/6
+[22:15:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/6
 
-[22:08:14] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/3
+[22:15:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/3
 
-[22:08:14] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/4
+[22:15:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/4
 
-[22:08:14] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/2
+[22:15:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/2
 
-[22:08:14] [Netty Client IO #0/INFO]: Server protocol version 1
-[22:08:14] [Netty IO #1/INFO]: Client protocol version 1
-[22:08:14] [Netty IO #1/INFO]: Client attempting to join with 4 mods : FML@7.10.85.1236,Forge@10.13.2.1236,mcp@9.05,mineduino@1.0
-[22:08:14] [Netty IO #1/INFO]: Attempting connection with missing mods [] at CLIENT
-[22:08:14] [Netty Client IO #0/INFO]: Attempting connection with missing mods [] at SERVER
-[22:08:14] [Server thread/INFO]: [Server thread] Server side modded connection established
-[22:08:14] [Client thread/INFO]: [Client thread] Client side modded connection established
-[22:08:14] [Server thread/INFO]: Player816[local:E:440955fc] logged in with entity id 6 at (978.5403246744731, 231.0, -659.3008500395014)
-[22:08:14] [Server thread/INFO]: Player816 joined the game
-[22:08:28] [Server thread/INFO]: inpin changed status > true
-[22:08:32] [Server thread/INFO]: inpin changed status > false
-[22:08:41] [Server thread/INFO]: Saving and pausing game...
-[22:08:42] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Overworld
-[22:08:42] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Nether
-[22:08:42] [Server thread/INFO]: Saving chunks for level 'MineDuino'/The End
-[22:08:42] [Server thread/INFO]: [cz.jacktech.mineduino.MineDuinoMod:serverStop:71]: server stopped
-[22:08:42] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:close:67]: SerialManager disconnecting
-[22:08:42] [Server thread/INFO]: Stopping server
-[22:08:42] [Server thread/INFO]: Saving players
-[22:08:43] [Server thread/INFO]: Saving worlds
-[22:08:43] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Overworld
-[22:08:43] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Nether
-[22:08:43] [Server thread/INFO]: Saving chunks for level 'MineDuino'/The End
-[22:08:43] [Server thread/INFO]: Unloading dimension 0
-[22:08:43] [Server thread/INFO]: Unloading dimension -1
-[22:08:43] [Server thread/INFO]: Unloading dimension 1
-[22:08:43] [Server thread/INFO]: Applying holder lookups
-[22:08:43] [Server thread/INFO]: Holder lookups applied
-[22:08:46] [Client thread/INFO]: Stopping!
-[22:08:46] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[22:08:46] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
-[22:08:48] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
-[22:08:48] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[22:15:19] [Netty Client IO #0/INFO]: Server protocol version 1
+[22:15:19] [Netty IO #1/INFO]: Client protocol version 1
+[22:15:19] [Netty IO #1/INFO]: Client attempting to join with 4 mods : FML@7.10.85.1236,Forge@10.13.2.1236,mcp@9.05,mineduino@1.0
+[22:15:19] [Netty IO #1/INFO]: Attempting connection with missing mods [] at CLIENT
+[22:15:19] [Netty Client IO #0/INFO]: Attempting connection with missing mods [] at SERVER
+[22:15:19] [Server thread/INFO]: [Server thread] Server side modded connection established
+[22:15:19] [Client thread/INFO]: [Client thread] Client side modded connection established
+[22:15:19] [Server thread/INFO]: Player614[local:E:6b55d07b] logged in with entity id 6 at (979.0004523177931, 231.0, -658.3585677224472)
+[22:15:19] [Server thread/INFO]: Player614 joined the game
+[22:15:29] [Server thread/INFO]: Player614 has just earned the achievement [Taking Inventory]
+[22:15:30] [Client thread/INFO]: [CHAT] Player614 has just earned the achievement [Taking Inventory]
+[22:15:42] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:15:42] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:15:43] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:15:43] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:15:46] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 3132ms behind, skipping 62 tick(s)
+[22:15:46] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:15:46] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:15:46] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:15:46] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:15:47] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:15:47] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:15:48] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:15:48] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:15:48] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:15:48] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:15:48] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:15:49] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:15:49] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:15:49] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:15:50] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:15:50] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:15:50] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:15:50] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:15:50] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:15:50] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:15:51] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:15:51] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:15:51] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:15:51] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:15:52] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:15:52] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:15:52] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:15:52] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:15:53] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:15:53] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:15:53] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:15:53] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:15:53] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:15:53] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:15:53] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:15:54] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:15:57] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:15:57] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:15:57] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:15:57] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:15:58] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:15:58] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:15:58] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:15:58] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:15:59] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:15:59] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:15:59] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:15:59] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:16:00] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:16:00] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:16:00] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:16:00] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:16:10] [Client thread/INFO]: [cz.jacktech.mineduino.gui.GuiHandler:getClientGuiElement:25]: getClientGuiElement
+[22:16:10] [Client thread/INFO]: [cz.jacktech.mineduino.gui.GuiHandler:getClientGuiElement:27]: ETileEntity
+[22:16:10] [Server thread/INFO]: Saving and pausing game...
+[22:16:10] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Overworld
+[22:16:10] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Nether
+[22:16:10] [Server thread/INFO]: Saving chunks for level 'MineDuino'/The End
+[22:16:12] [Client thread/INFO]: [cz.jacktech.mineduino.gui.GuiHandler:getClientGuiElement:25]: getClientGuiElement
+[22:16:12] [Client thread/INFO]: [cz.jacktech.mineduino.gui.GuiHandler:getClientGuiElement:27]: ETileEntity
+[22:16:12] [Server thread/INFO]: Saving and pausing game...
+[22:16:12] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Overworld
+[22:16:12] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Nether
+[22:16:12] [Server thread/INFO]: Saving chunks for level 'MineDuino'/The End
+[22:16:14] [Client thread/INFO]: [cz.jacktech.mineduino.gui.GuiHandler:getClientGuiElement:25]: getClientGuiElement
+[22:16:14] [Client thread/INFO]: [cz.jacktech.mineduino.gui.GuiHandler:getClientGuiElement:27]: ETileEntity
+[22:16:14] [Server thread/INFO]: Saving and pausing game...
+[22:16:14] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Overworld
+[22:16:14] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Nether
+[22:16:14] [Server thread/INFO]: Saving chunks for level 'MineDuino'/The End
+[22:16:16] [Client thread/INFO]: [cz.jacktech.mineduino.gui.GuiHandler:getClientGuiElement:25]: getClientGuiElement
+[22:16:16] [Client thread/INFO]: [cz.jacktech.mineduino.gui.GuiHandler:getClientGuiElement:27]: ETileEntity
+[22:16:16] [Server thread/INFO]: Saving and pausing game...
+[22:16:16] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Overworld
+[22:16:16] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Nether
+[22:16:16] [Server thread/INFO]: Saving chunks for level 'MineDuino'/The End
+[22:16:17] [Client thread/INFO]: [cz.jacktech.mineduino.gui.GuiHandler:getClientGuiElement:25]: getClientGuiElement
+[22:16:17] [Client thread/INFO]: [cz.jacktech.mineduino.gui.GuiHandler:getClientGuiElement:27]: ETileEntity
+[22:16:17] [Server thread/INFO]: Saving and pausing game...
+[22:16:17] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Overworld
+[22:16:17] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Nether
+[22:16:17] [Server thread/INFO]: Saving chunks for level 'MineDuino'/The End
+[22:16:20] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:16:20] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:16:20] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:16:20] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:16:21] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:16:21] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:16:21] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:16:21] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:16:22] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:16:22] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:16:22] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:16:22] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:16:23] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:16:23] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:16:23] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:16:23] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:16:33] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/1
+
+[22:16:33] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:16:33] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:16:33] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:16:33] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:16:34] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/0
+
+[22:16:34] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:16:34] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:16:34] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:16:34] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:17:08] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/1
+
+[22:17:08] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:17:08] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:17:08] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:17:08] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:17:09] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/0
+
+[22:17:09] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:17:09] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:17:09] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:17:10] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:17:10] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/1
+
+[22:17:10] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:17:10] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:17:10] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:17:10] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:17:11] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/0
+
+[22:17:11] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:17:11] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:17:11] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:17:11] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:17:11] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/1
+
+[22:17:11] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:17:12] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:17:12] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:17:12] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:17:12] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/0
+
+[22:17:12] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:17:12] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:17:12] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:17:12] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:17:13] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/1
+
+[22:17:13] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:17:13] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:17:13] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:17:13] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:17:13] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/0
+
+[22:17:13] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:17:13] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:17:14] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:17:14] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:17:14] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/1
+
+[22:17:14] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:17:14] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:17:14] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:17:15] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/0
+
+[22:17:15] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:17:15] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:17:15] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:17:15] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:17:15] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:17:15] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/1
+
+[22:17:16] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:17:16] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/0
+
+[22:17:16] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:17:16] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:17:16] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:17:16] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:17:16] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:17:16] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:17:16] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:17:16] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/1
+
+[22:17:17] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:17:17] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/0
+
+[22:17:17] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:17:17] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:17:17] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:17:17] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:17:17] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:17:17] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:17:17] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:17:17] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/1
+
+[22:17:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:17:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/0
+
+[22:17:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:17:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:17:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:17:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:17:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:17:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:17:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:17:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/1
+
+[22:17:19] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:17:19] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/0
+
+[22:17:19] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:17:19] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:17:19] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:17:19] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:17:19] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:17:19] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:17:19] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:17:20] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/1
+
+[22:17:20] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:17:20] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/0
+
+[22:17:20] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:17:20] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:17:20] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:17:20] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:17:20] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:17:20] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:17:20] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:17:25] [Server thread/INFO]: Saving and pausing game...
+[22:17:25] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Overworld
+[22:17:25] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Nether
+[22:17:25] [Server thread/INFO]: Saving chunks for level 'MineDuino'/The End
+[22:19:01] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/1
+
+[22:19:01] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:19:01] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:19:01] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:19:01] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:19:02] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/0
+
+[22:19:02] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:19:02] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:19:02] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:19:02] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:19:03] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/1
+
+[22:19:03] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:19:03] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:19:03] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:19:03] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/0
+
+[22:19:03] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:19:03] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:19:03] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:19:03] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:19:03] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:19:04] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/1
+
+[22:19:04] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/1
+
+[22:19:04] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/0
+
+[22:19:04] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/1
+
+[22:19:04] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:19:04] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/1
+
+[22:19:04] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:19:04] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[22:19:04] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:19:05] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:19:07] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/8
+
+[22:19:07] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/8/0
+
+[22:19:13] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/2
+
+[22:19:13] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[22:19:13] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/3
+
+[22:19:13] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[22:19:15] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/4
+
+[22:19:15] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/4/0
+
+[22:19:16] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/5
+
+[22:19:16] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/5/0
+
+[22:19:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/6
+
+[22:19:18] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/6/0
+
+[22:19:21] [Server thread/INFO]: Saving and pausing game...
+[22:19:21] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Overworld
+[22:19:21] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Nether
+[22:19:21] [Server thread/INFO]: Saving chunks for level 'MineDuino'/The End
+[22:19:22] [Server thread/INFO]: [cz.jacktech.mineduino.MineDuinoMod:serverStop:71]: server stopped
+[22:19:22] [Server thread/INFO]: [cz.jacktech.mineduino.serialiface.SerialManager:close:67]: SerialManager disconnecting
+[22:19:22] [Server thread/INFO]: Stopping server
+[22:19:22] [Server thread/INFO]: Saving players
+[22:19:22] [Server thread/INFO]: Saving worlds
+[22:19:22] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Overworld
+[22:19:22] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Nether
+[22:19:22] [Server thread/INFO]: Saving chunks for level 'MineDuino'/The End
+[22:19:22] [Server thread/INFO]: Unloading dimension 0
+[22:19:22] [Server thread/INFO]: Unloading dimension -1
+[22:19:22] [Server thread/INFO]: Unloading dimension 1
+[22:19:22] [Server thread/INFO]: Applying holder lookups
+[22:19:24] [Server thread/INFO]: Holder lookups applied
+[22:19:24] [Client thread/INFO]: Stopping!
+[22:19:24] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[22:19:24] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
+[22:19:25] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
+[22:19:25] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 

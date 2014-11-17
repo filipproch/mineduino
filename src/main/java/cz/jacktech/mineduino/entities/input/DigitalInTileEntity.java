@@ -2,6 +2,7 @@ package cz.jacktech.mineduino.entities.input;
 
 import cz.jacktech.mineduino.core.MineduinoLogger;
 import cz.jacktech.mineduino.entities.ETileEntity;
+import cz.jacktech.mineduino.entities.InputTileEntity;
 import cz.jacktech.mineduino.gui.GuiHandler;
 import cz.jacktech.mineduino.serialiface.SerialManager;
 import cz.jacktech.mineduino.serialiface.arduino.ArduinoDigitalPin;
@@ -11,7 +12,7 @@ import net.minecraft.nbt.NBTTagCompound;
 /**
  * Created by toor on 17.11.14.
  */
-public class DigitalInTileEntity extends ETileEntity {
+public class DigitalInTileEntity extends InputTileEntity {
 
     public static final String ENTITY_NAME = DigitalInTileEntity.class.getSimpleName();
 
@@ -50,9 +51,8 @@ public class DigitalInTileEntity extends ETileEntity {
             setArduinoPin(arduinoPinNumber);
 
         if(arduinoPin != null && arduinoPin.read() != currentStatus){
-            MineduinoLogger.info("inpin changed status > "+arduinoPin.read());
             currentStatus = arduinoPin.read();
-            markForUpdate();
+            notifyNeighbourBlocks();
         }
     }
 
@@ -75,7 +75,6 @@ public class DigitalInTileEntity extends ETileEntity {
 
     @Override
     public int isProvidingPower() {
-        MineduinoLogger.info("isProvidingPower: "+currentStatus+", ar"+arduinoPin);
         return currentStatus ? 15 : 0;
     }
 
@@ -89,5 +88,10 @@ public class DigitalInTileEntity extends ETileEntity {
 
     public int getArduinoPinNumber() {
         return arduinoPinNumber;
+    }
+
+    @Override
+    public Object getInput() {
+        return currentStatus;
     }
 }

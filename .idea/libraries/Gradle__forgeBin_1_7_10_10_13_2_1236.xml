@@ -6,7 +6,6 @@
     <JAVADOC />
     <SOURCES>
       <root url="file://$PROJECT_DIR$/build/tmp/recompSrc" />
-      <root url="file://$PROJECT_DIR$/build/tmp/recompSrc" />
     </SOURCES>
   </library>
 </component>
