@@ -38,9 +38,6 @@ void setupMega2560();
 #define ENABLED 1
 #define DISABLED 0
 
-#define ANALOG 0
-#define DIGITAL 1
-
 #if defined(__AVR_ATmega2560__) //mega 2560 (atmega 2560)
 #define USED_ARDUINO MEGA2560
 #define PINS_NUMBER 54
@@ -68,7 +65,6 @@ void setup(){
 }
 
 void loop(){
-  //Serial.println("/ping/");
   printData();
   delay(100);
 }
@@ -92,26 +88,27 @@ void readCommand(){
 
     if(line == "set"){
         String what = nextSegmentString();
+        int pin = nextSegmentInt();
         if(what == "in"){
-            setupPin(nextSegmentInt(), D_IN_PIN);
+            setupPin(pin, D_IN_PIN);
+            pinMode(pin, INPUT);
         }else if(what == "out"){
-            setupPin(nextSegmentInt(), D_OUT_PIN);
+            setupPin(pin, D_OUT_PIN);
+            pinMode(pin, OUTPUT);
         }else if(what == "aout"){
-            setupPin(nextSegmentInt(), A_OUT_PIN);
+            setupPin(pin, A_OUT_PIN);
         }else if(what == "ain"){
-            setupAPin(nextSegmentInt());
+            setupAPin(pin);
         }else if(what == "null"){
-            setupPin(nextSegmentInt(), NOTHING);
+            setupPin(pin, NOTHING);
+            pinMode(pin, OUTPUT);
         }
     }else if(line == "write"){
-        int what = nextSegmentInt();
-        switch(what){
-            case ANALOG:
-                writeAnalog(nextSegmentInt(), nextSegmentInt());
-                break;
-            case DIGITAL:
-                writeDigital(nextSegmentInt(), nextSegmentInt());
-                break;
+        int pin = nextSegmentInt();
+        if(pinsStatus[pin] == A_OUT_PIN){
+            writeAnalog(pin, nextSegmentInt());
+        }else if(pinsStatus[pin] == D_OUT_PIN){
+            writeDigital(pin, nextSegmentInt());
         }
     }else if(line == "connected"){
         printSupportedPins();
@@ -126,8 +123,9 @@ void readCommand(){
 }
 
 void setupPin(int pin, int type){
-    if(pin >= 0 && pin <= PINS_NUMBER && pinsStatus[pin] == NOTHING){
+    if(pin >= 0 && pin <= PINS_NUMBER){
         pinsStatus[pin] = type;
+        Serial.println(pinsStatus[pin]);
     }
 }
 
@@ -152,17 +150,19 @@ void printData(){
 }
 
 void printAnalog(int pin){
-    Serial.print("/dat/a");
+    Serial.print("com:/dat/a");
     Serial.print(pin);
     Serial.print("/");
-    Serial.println(analogRead(pin));
+    Serial.print(analogRead(pin));
+    Serial.println("/");
 }
 
 void printDigital(int pin){
-    Serial.print("/dat/d");
+    Serial.print("com:/dat/d");
     Serial.print(pin);
     Serial.print("/");
-    Serial.println(digitalRead(pin));
+    Serial.print(digitalRead(pin));
+    Serial.println("/");
 }
 
 void writeAnalog(int pin, int value){
@@ -178,10 +178,12 @@ void writeDigital(int pin, int value){
 }
 
 void printSupportedPins(){
-    Serial.print("/setup/dpins/");
-    Serial.println(PINS_NUMBER);
-    Serial.print("/setup/apins/");
-    Serial.println(ANALOG_PINS);
+    Serial.print("com:/setup/dpins/");
+    Serial.print(PINS_NUMBER);
+    Serial.println("/");
+    Serial.print("com:/setup/apins/");
+    Serial.print(ANALOG_PINS);
+    Serial.println("/");
 }
 
 bool isPwmPin(int pin){

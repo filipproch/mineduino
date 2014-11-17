@@ -1,6 +1,7 @@
 package cz.jacktech.mineduino.serialiface;
 
 import cz.jacktech.mineduino.MineDuinoMod;
+import cz.jacktech.mineduino.core.MineduinoLogger;
 import cz.jacktech.mineduino.serialiface.arduino.ArduinoAnalogPin;
 import cz.jacktech.mineduino.serialiface.arduino.ArduinoDevice;
 import cz.jacktech.mineduino.serialiface.arduino.ArduinoDigitalPin;
@@ -38,6 +39,8 @@ public class SerialManager {
     }
 
     public void connect(){
+        arduinoPins.clear();
+
         System.out.println("SerialManager connecting");
         serialPort = new SerialPort(SERIAL_PORT);
         try {
@@ -76,49 +79,19 @@ public class SerialManager {
         return serialPort != null && serialPort.isOpened();
     }
 
-    private Runnable serialIfaceReader = new Runnable() {
-
-        private StringBuilder cmd = new StringBuilder();
-
-        @Override
-        public void run() {
-            try {
-                System.out.println("SerialManager starting reader");
-                startReader();
-            } catch (Exception e) {
-                e.printStackTrace();
+    private void inputReceived(String[] input) {
+        //System.out.println("input received: "+input[2]);
+        if(input[0].equals("setup")){
+            if(input[1].equals("dpins")){
+                addDigitalPins(Integer.parseInt(input[2]));
+            }else if(input[1].equals("apins")){
+                addAnalogPins(Integer.parseInt(input[2]));
             }
-        }
-
-        private void startReader() throws InterruptedException, SerialPortException {
-            String line;
-            while (isAvailable()) {
-                line = serialPort.readString();
-                if (line != null) {
-                    cmd.append(line);
-                    System.out.println(cmd.toString());
-                    if (cmd.length() > 0) {
-                        //parseCmd();
-                    }
-                }
-            }
-            System.out.println("SerialManager reader stopped");
-        }
-    };
-
-    private void inputReceived(SerialData input) {
-        System.out.println("input received: "+input.toString());
-        if(input.get(0).equals("setup")){
-            if(input.get(1).equals("dpins")){
-                addDigitalPins(input.getInt(2));
-            }else if(input.get(1).equals("apins")){
-                addAnalogPins(input.getInt(2));
-            }
-        }else if(input.get(0).equals("dat")){
-            if(input.get(1).equals("d")){
-                updatePin(input.getInt(2), input.getInt(3), false);
-            }else if(input.get(1).equals("a")){
-                updatePin(input.getInt(2), input.getInt(3), true);
+        }else if(input[0].equals("dat")){
+            if(input[1].startsWith("d")){
+                updatePin(Integer.parseInt(input[1].substring(1)), Integer.parseInt(input[2]), false);
+            }else if(input[1].startsWith("a")){
+                updatePin(Integer.parseInt(input[1].substring(1)), Integer.parseInt(input[2]), true);
             }
         }
     }
@@ -145,19 +118,20 @@ public class SerialManager {
     }
 
     private void addAnalogPins(int pins) {
+        MineduinoLogger.info("adding "+pins+" analog pins");
         for(int i = 0;i< pins;i++){
             arduinoPins.add(ArduinoPin.create(i, 0, true));
         }
     }
 
     private void addDigitalPins(int pins) {
-        arduinoPins.clear();
+        MineduinoLogger.info("adding "+pins+" digital pins");
         for(int i = 0;i< pins;i++){
             arduinoPins.add(ArduinoPin.create(i, 0, false));
         }
     }
 
-    private boolean hasPin(int pinNumber) {
+    private boolean hasPin(int pinNumber, int pinType) {
         for(ArduinoPin pin : arduinoPins)
             if(pin.pinNumber == pinNumber)
                 return true;
@@ -184,10 +158,8 @@ public class SerialManager {
     }
 
     public void writePin(ArduinoDigitalPin pin, int value) throws IncorrectPinModeException {
-        if(pin.pinType == ArduinoPin.PinMode.OUTPUT)
-            sendCmd("/write/1/"+pin.pinNumber+"/"+value);
-        else if(pin.pinType == ArduinoPin.PinMode.ANALOG_OUTPUT)
-            sendCmd("/write/0/"+pin.pinNumber+"/"+value);
+        if(pin.pinType == ArduinoPin.PinMode.OUTPUT || pin.pinType == ArduinoPin.PinMode.ANALOG_OUTPUT)
+            sendCmd("/write/"+pin.pinNumber+"/"+value);
         else
             throw new IncorrectPinModeException();
     }
@@ -209,10 +181,26 @@ public class SerialManager {
         }
     }
 
-    public ArduinoPin getPin(int pinNumber) {
+    /*public ArduinoPin getPin(int pinNumber, int pinType) {
         for(ArduinoPin pin : arduinoPins)
-            if(pin.pinNumber == pinNumber)
+            if(pin.pinNumber == pinNumber &&
+                    ((pinType == ArduinoPin.DIGITAL && pin instanceof ArduinoDigitalPin)
+                    || (pinType == ArduinoPin.ANALOG && pin instanceof ArduinoAnalogPin)))
                 return pin;
+        return null;
+    }*/
+
+    public ArduinoAnalogPin getAnalogPin(int pinNumber){
+        for(ArduinoPin pin : arduinoPins)
+            if(pin.pinNumber == pinNumber && pin instanceof ArduinoAnalogPin)
+                return (ArduinoAnalogPin) pin;
+        return null;
+    }
+
+    public ArduinoDigitalPin getDigitalPin(int pinNumber){
+        for(ArduinoPin pin : arduinoPins)
+            if(pin.pinNumber == pinNumber && pin instanceof ArduinoDigitalPin)
+                return (ArduinoDigitalPin) pin;
         return null;
     }
 
@@ -222,22 +210,22 @@ public class SerialManager {
 
         @Override
         public void serialEvent(SerialPortEvent event) {
-            System.out.println("serialEvent: "+event.getEventType());
+            //System.out.println("serialEvent: "+event.getEventType());
             if(event.isRXCHAR() && event.getEventValue() > 0){
                 try {
                     byte buffer[] = serialPort.readBytes();
-                    for (byte b: buffer) {
-                        if ( (b == '\r' || b == '\n') && message.length() > 0) {
+                    for (byte b : buffer) {
+                        if (b == '\n' && message.length() > 0) {
                             String toProcess = message.toString();
-                            inputReceived(new SerialData(toProcess));
+                            //MineduinoLogger.info("serialMsg: " + toProcess);
+                            if(toProcess.startsWith("com:"))
+                                inputReceived(toProcess.replace("com:/","").split("/"));
                             message.setLength(0);
-                        }
-                        else {
+                        } else {
                             message.append((char)b);
                         }
                     }
-                }
-                catch (SerialPortException ex) {
+                }catch (SerialPortException ex) {
                     System.out.println(ex);
                     System.out.println("serialEvent");
                 }

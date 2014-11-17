@@ -1,5 +1,7 @@
 package cz.jacktech.mineduino.serialiface;
 
+import cz.jacktech.mineduino.core.MineduinoLogger;
+
 /**
  * Created by toor on 12.11.14.
  */
@@ -12,7 +14,9 @@ public class SerialData {
     }
 
     private void parse(String received) {
-        mDataArray = received.split("/");
+        String replaced = received.replace("com:","").replace("\n","");
+        mDataArray = replaced.split("/");
+        MineduinoLogger.info("rec: " + received + ", rep: " + replaced + ", 0:" + mDataArray[0]);
     }
 
     public String get(int position){

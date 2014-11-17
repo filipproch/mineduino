@@ -1,8 +1,8 @@
 package cz.jacktech.mineduino.blocks;
 
 import cz.jacktech.mineduino.MineDuinoMod;
+import cz.jacktech.mineduino.core.MineduinoLogger;
 import cz.jacktech.mineduino.entities.ETileEntity;
-import cz.jacktech.mineduino.entities.IEntityRequester;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -16,31 +16,23 @@ import net.minecraft.world.World;
  */
 public abstract class ABlock extends BlockContainer {
 
-    private IEntityRequester requester;
-
-    protected ABlock(Material material, IEntityRequester requester) {
+    protected ABlock(Material material) {
         super(material);
-        this.requester = requester;
     }
 
     @Override
     public void onBlockAdded(World world, int x, int y, int z) {
-        ETileEntity eTileEntity = (ETileEntity) world.getTileEntity(x, y, z);
-        eTileEntity.setRequester(requester);
-        System.out.println("requester set");
-        requester.blockAdded(eTileEntity);
-
         if (world.getBlockMetadata(x, y, z) == 0) {
             super.onBlockAdded(world, x, y, z);
         }
 
+        if(!world.isRemote) {
+            ETileEntity eTileEntity = (ETileEntity) world.getTileEntity(x, y, z);
+            eTileEntity.blockAdded();
+        }
+
         world.notifyBlocksOfNeighborChange(x, y, z, this);
         world.scheduleBlockUpdate(x, y, z, this, 0);
-    }
-
-    @Override
-    public boolean canProvidePower() {
-        return requester.canProvidePower();
     }
 
     @Override
@@ -54,13 +46,10 @@ public abstract class ABlock extends BlockContainer {
     }
 
     private int isProvidingPower(IBlockAccess world, int x, int y, int z) {
-
         ETileEntity tileEntity = (ETileEntity) world.getTileEntity(x, y, z);
-        /*if (tileEntity instanceof DigitalInEntity) {
-            return ((DigitalInEntity) tileEntity).isProvidingPower ? 15 : 0;
-        }*/
-
-        return requester.isProvidingPower(tileEntity);
+        if(!tileEntity.getWorldObj().isRemote)
+            return tileEntity.isProvidingPower();
+        return 0;
     }
 
     @Override
@@ -77,17 +66,12 @@ public abstract class ABlock extends BlockContainer {
     private void blockDestroyed(World world, int x, int y, int z){
         if(!world.isRemote){
             ETileEntity tileEntity = (ETileEntity) world.getTileEntity(x, y, z);
-            requester.blockDestroyed(tileEntity);
-            /*if (tileEntity instanceof DigitalInEntity) {
-                DigitalInEntity entity = (DigitalInEntity) tileEntity;
-                SerialManager.getInstance().resetPin(entity.getArduinoPin());
-            }*/
+            tileEntity.blockDestroyed();
         }
     }
 
     @Override
     public void breakBlock(World world, int x, int y, int z, Block block, int breaker) {
-        //super.breakBlock(p_breakBlock_1_, p_breakBlock_2_, p_breakBlock_3_, p_breakBlock_4_, p_breakBlock_5_, p_breakBlock_6_);
         blockDestroyed(world, x, y, z);
     }
 }

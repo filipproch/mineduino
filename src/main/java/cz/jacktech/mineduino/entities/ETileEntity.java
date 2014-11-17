@@ -1,5 +1,8 @@
 package cz.jacktech.mineduino.entities;
 
+import cz.jacktech.mineduino.blocks.input.AnalogIn;
+import cz.jacktech.mineduino.blocks.input.DigitalIn;
+import cz.jacktech.mineduino.blocks.output.DigitalOut;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
@@ -9,18 +12,13 @@ import net.minecraft.tileentity.TileEntity;
 /**
  * Created by toor on 16.11.14.
  */
-public class ETileEntity extends TileEntity{
+public abstract class ETileEntity extends TileEntity{
 
-    protected IEntityRequester requester;
+    //protected final IEntityRequester requester;
     protected final EntityValueStore valueStore;
 
     public ETileEntity() {
         this.valueStore = new EntityValueStore();
-    }
-
-    public void setRequester(IEntityRequester requester){
-        this.requester = requester;
-        requester.create(this);
     }
 
     @Override
@@ -40,19 +38,20 @@ public class ETileEntity extends TileEntity{
         markDirty();
     }
 
-    @Override
-    public void updateEntity() {
-        if(requester != null && !worldObj.isRemote)
-            requester.requestUpdate(this);
-    }
+    public abstract void blockDestroyed();
 
-    public int openGui(){
-        if(requester != null)
-            return requester.getGui(this);
-        return 0;
-    }
+    public abstract int openGui();
 
     public EntityValueStore getValueStore() {
         return valueStore;
     }
+
+    public abstract void blockAdded();
+
+    public abstract int isProvidingPower();
+
+    public boolean isPowered(){
+        return getWorldObj().isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord);
+    }
+
 }

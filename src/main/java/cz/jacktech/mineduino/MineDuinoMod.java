@@ -13,11 +13,11 @@ import cpw.mods.fml.relauncher.SideOnly;
 import cz.jacktech.mineduino.blocks.output.AnalogOut;
 import cz.jacktech.mineduino.blocks.input.DigitalIn;
 import cz.jacktech.mineduino.blocks.output.DigitalOut;
+import cz.jacktech.mineduino.entities.input.DigitalInTileEntity;
+import cz.jacktech.mineduino.entities.output.DigitalOutTileEntity;
 import cz.jacktech.mineduino.gui.GuiHandler;
 import cz.jacktech.mineduino.serialiface.SerialManager;
 import cz.jacktech.mineduino.synch.ArduinoPinSyncMessage;
-import cz.jacktech.mineduino.entities.tiles.InputTileEntity;
-import cz.jacktech.mineduino.entities.tiles.OutputTileEntity;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -52,8 +52,8 @@ public class MineDuinoMod {
         GameRegistry.registerBlock(blockDigitalIn = new DigitalIn(), DigitalIn.BLOCK_NAME);
         GameRegistry.registerBlock(blockDigitalOut = new DigitalOut(), DigitalOut.BLOCK_NAME);
         GameRegistry.registerBlock(blockAnalogOut = new AnalogOut(), AnalogOut.BLOCK_NAME);
-        GameRegistry.registerTileEntity(InputTileEntity.class, InputTileEntity.ENTITY_NAME);
-        GameRegistry.registerTileEntity(OutputTileEntity.class, OutputTileEntity.ENTITY_NAME);
+        GameRegistry.registerTileEntity(DigitalInTileEntity.class, DigitalInTileEntity.ENTITY_NAME);
+        GameRegistry.registerTileEntity(DigitalOutTileEntity.class, DigitalOutTileEntity.ENTITY_NAME);
 
         NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 

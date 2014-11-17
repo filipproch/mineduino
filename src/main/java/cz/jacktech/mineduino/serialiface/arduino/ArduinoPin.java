@@ -5,6 +5,9 @@ package cz.jacktech.mineduino.serialiface.arduino;
  */
 public abstract class ArduinoPin {
 
+    public static final int DIGITAL = 0;
+    public static final int ANALOG = 1;
+
     public int pinNumber;
 
     protected ArduinoPin(int pinNumber) {

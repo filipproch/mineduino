@@ -2,8 +2,9 @@ package cz.jacktech.mineduino.gui;
 
 import cz.jacktech.mineduino.MineDuinoMod;
 import cz.jacktech.mineduino.entities.ETileEntity;
-import cz.jacktech.mineduino.entities.tiles.InputTileEntity;
-import cz.jacktech.mineduino.entities.tiles.OutputTileEntity;
+import cz.jacktech.mineduino.entities.input.DigitalInTileEntity;
+import cz.jacktech.mineduino.entities.output.DigitalOutTileEntity;
+import cz.jacktech.mineduino.serialiface.arduino.ArduinoDigitalPin;
 import cz.jacktech.mineduino.synch.ArduinoPinSyncMessage;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
@@ -24,6 +25,7 @@ public class GuiEnterDigitalPin extends GuiScreen {
     private GuiButton rightArrowBtn;
 
     private int arduinoPin = 0;
+    private ArduinoDigitalPin arduinoDigitalPin;
 
     public GuiEnterDigitalPin(ETileEntity tileEntity) {
         this.tileEntity = tileEntity;
@@ -34,21 +36,16 @@ public class GuiEnterDigitalPin extends GuiScreen {
         super.initGui();
         //Keyboard.enableRepeatEvents(true);
         this.buttonList.clear();
-        this.buttonList.add(this.doneBtn = new GuiButton(0, this.width / 2 - 4 - 150, this.height / 4 + 120 + 12, 150, 20, I18n.format("gui.done", new Object[0])));
-        this.buttonList.add(this.cancelBtn = new GuiButton(1, this.width / 2 + 4, this.height / 4 + 120 + 12, 150, 20, I18n.format("gui.cancel", new Object[0])));
+        this.buttonList.add(this.doneBtn = new GuiButton(0, this.width / 2 + 4, this.height / 4 + 120 + 12, 150, 20, I18n.format("gui.done", new Object[0])));
+        this.buttonList.add(this.cancelBtn = new GuiButton(1, this.width / 2 - 4 - 150, this.height / 4 + 120 + 12, 150, 20, I18n.format("gui.cancel", new Object[0])));
         this.buttonList.add(this.leftArrowBtn = new GuiButton(2, this.width/2 - 4 - 30, this.height / 4 + 60, 20, 20, "<"));
         this.buttonList.add(this.rightArrowBtn = new GuiButton(3, this.width/2 + 4 + 10, this.height / 4 + 60, 20, 20, ">"));
-        /*this.commandTextField = new GuiTextField(this.fontRendererObj, this.width / 2 - 50, 100, 100, 20);
-        this.commandTextField.setMaxStringLength(2);
-        this.commandTextField.setFocused(true);
-        if(tileEntity.getArduinoPin() != -1)
-            this.commandTextField.setText(String.valueOf(tileEntity.getArduinoPin()));*/
-        if(tileEntity instanceof InputTileEntity)
-            arduinoPin = Integer.parseInt(((InputTileEntity)tileEntity).getInputName());
-        else if(tileEntity instanceof OutputTileEntity)
-            arduinoPin = Integer.parseInt(((OutputTileEntity)tileEntity).getOutputName());
 
-        //this.doneBtn.enabled = this.commandTextField.getText().trim().length() > 0;
+        if(tileEntity instanceof DigitalInTileEntity)
+            arduinoPin = ((DigitalInTileEntity)tileEntity).getArduinoPinNumber();
+        else if(tileEntity instanceof DigitalOutTileEntity)
+            arduinoPin = ((DigitalOutTileEntity)tileEntity).getArduinoPinNumber();
+
     }
 
     @Override

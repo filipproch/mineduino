@@ -39,7 +39,7 @@ public class ArduinoDigitalPin extends ArduinoPin{
             } catch (IncorrectPinModeException e) {
                 e.printStackTrace();
             }
-            status = true;
+            status = false;
         }
     }
 

@@ -4,9 +4,8 @@ import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import cz.jacktech.mineduino.entities.ETileEntity;
-import cz.jacktech.mineduino.entities.old.DigitalPinEntity;
-import cz.jacktech.mineduino.entities.tiles.InputTileEntity;
-import cz.jacktech.mineduino.entities.tiles.OutputTileEntity;
+import cz.jacktech.mineduino.entities.input.DigitalInTileEntity;
+import cz.jacktech.mineduino.entities.output.DigitalOutTileEntity;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.tileentity.TileEntity;
 
@@ -49,15 +48,13 @@ public class ArduinoPinSyncMessage implements IMessage {
         @Override
         public IMessage onMessage(ArduinoPinSyncMessage m, MessageContext ctx) {
             TileEntity entity = ctx.getServerHandler().playerEntity.getEntityWorld().getTileEntity(m.x,m.y,m.z);
-            if(entity instanceof OutputTileEntity){
-                System.out.println("updating entity");
-                OutputTileEntity outputTileEntity = (OutputTileEntity) entity;
-                outputTileEntity.setOutputName(String.valueOf(m.arduinoPin));
+            if(entity instanceof DigitalInTileEntity){
+                DigitalInTileEntity outputTileEntity = (DigitalInTileEntity) entity;
+                outputTileEntity.setArduinoPinNumber(m.arduinoPin);
                 outputTileEntity.markForUpdate();
-            }else if(entity instanceof InputTileEntity){
-                System.out.println("updating entity");
-                InputTileEntity inputTileEntity = (InputTileEntity) entity;
-                inputTileEntity.setInputName(String.valueOf(m.arduinoPin));
+            }else if(entity instanceof DigitalOutTileEntity){
+                DigitalOutTileEntity inputTileEntity = (DigitalOutTileEntity) entity;
+                inputTileEntity.setArduinoPinNumber(m.arduinoPin);
                 inputTileEntity.markForUpdate();
             }
             return null;
