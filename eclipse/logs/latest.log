@@ -48,3 +48,32 @@ java.io.FileNotFoundException: mineduino:textures/blocks/analogOut.png
 [20:26:53] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Overworld
 [20:26:53] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Nether
 [20:26:53] [Server thread/INFO]: Saving chunks for level 'MineDuino'/The End
+[20:27:59] [Server thread/INFO]: Player758 has just earned the achievement [Taking Inventory]
+[20:28:01] [Client thread/INFO]: [CHAT] Player758 has just earned the achievement [Taking Inventory]
+[20:28:09] [Server thread/INFO]: [Player758: Set the time to 22000]
+[20:28:09] [Client thread/INFO]: [CHAT] Set the time to 22000
+[20:28:17] [Server thread/INFO]: [Player758: Set the time to 22500]
+[20:28:17] [Client thread/INFO]: [CHAT] Set the time to 22500
+[20:29:36] [Server thread/INFO]: [Player758: Set the time to 12000]
+[20:29:36] [Client thread/INFO]: [CHAT] Set the time to 12000
+[20:29:48] [Server thread/INFO]: [Player758: Set the time to 6000]
+[20:29:48] [Client thread/INFO]: [CHAT] Set the time to 6000
+[20:30:00] [Server thread/INFO]: Saving and pausing game...
+[20:30:00] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Overworld
+[20:30:00] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Nether
+[20:30:00] [Server thread/INFO]: Saving chunks for level 'MineDuino'/The End
+[20:30:02] [Server thread/INFO]: Saving and pausing game...
+[20:30:02] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Overworld
+[20:30:02] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Nether
+[20:30:02] [Server thread/INFO]: Saving chunks for level 'MineDuino'/The End
+[20:30:21] [Server thread/INFO]: Saving and pausing game...
+[20:30:21] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Overworld
+[20:30:22] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Nether
+[20:30:22] [Server thread/INFO]: Saving chunks for level 'MineDuino'/The End
+[20:30:23] [Server thread/INFO]: Stopping server
+[20:30:23] [Server thread/INFO]: Saving players
+[20:30:23] [Server thread/INFO]: Saving worlds
+[20:30:23] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Overworld
+[20:30:23] [Server thread/INFO]: Saving chunks for level 'MineDuino'/Nether
+[20:30:23] [Server thread/INFO]: Saving chunks for level 'MineDuino'/The End
+[20:30:26] [Client thread/INFO]: Stopping!

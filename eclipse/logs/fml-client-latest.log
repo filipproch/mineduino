@@ -2786,3 +2786,95 @@
 
 [20:26:49] [Server thread/INFO] [mineduino/]: updating analog pin: 68
 [20:26:53] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save MineDuino
+[20:27:56] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[20:27:56] [Server thread/INFO] [mineduino/]: updating analog pin: 0
+[20:28:06] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/85
+
+[20:28:06] [Server thread/INFO] [mineduino/]: updating analog pin: 85
+[20:28:10] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[20:28:10] [Server thread/INFO] [mineduino/]: updating analog pin: 0
+[20:28:18] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/17
+
+[20:28:18] [Server thread/INFO] [mineduino/]: updating analog pin: 17
+[20:28:32] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/34
+
+[20:28:32] [Server thread/INFO] [mineduino/]: updating analog pin: 34
+[20:28:34] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save MineDuino
+[20:28:46] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/51
+
+[20:28:46] [Server thread/INFO] [mineduino/]: updating analog pin: 51
+[20:28:58] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/68
+
+[20:28:58] [Server thread/INFO] [mineduino/]: updating analog pin: 68
+[20:29:09] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/85
+
+[20:29:09] [Server thread/INFO] [mineduino/]: updating analog pin: 85
+[20:29:19] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save MineDuino
+[20:29:21] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/102
+
+[20:29:21] [Server thread/INFO] [mineduino/]: updating analog pin: 102
+[20:29:31] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/119
+
+[20:29:31] [Server thread/INFO] [mineduino/]: updating analog pin: 119
+[20:29:38] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/102
+
+[20:29:38] [Server thread/INFO] [mineduino/]: updating analog pin: 102
+[20:29:48] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/255
+
+[20:29:48] [Server thread/INFO] [mineduino/]: updating analog pin: 255
+[20:29:55] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[20:29:55] [Server thread/INFO] [mineduino/]: updating analog pin: 0
+[20:29:56] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/3
+
+[20:29:56] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/3/0
+
+[20:30:00] [Client thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.gui.GuiHandler:getClientGuiElement:25]: getClientGuiElement
+[20:30:00] [Client thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.gui.GuiHandler:getClientGuiElement:27]: ETileEntity
+[20:30:00] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save MineDuino
+[20:30:02] [Client thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.gui.GuiHandler:getClientGuiElement:25]: getClientGuiElement
+[20:30:02] [Client thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.gui.GuiHandler:getClientGuiElement:27]: ETileEntity
+[20:30:02] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save MineDuino
+[20:30:04] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/2
+
+[20:30:07] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save MineDuino
+[20:30:09] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/1
+
+[20:30:18] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[20:30:19] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /set/out/2
+
+[20:30:19] [Server thread/INFO] [STDOUT/]: [cz.jacktech.mineduino.serialiface.SerialManager:sendCmd:146]: sent command: /write/2/0
+
+[20:30:21] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save MineDuino
+[20:30:23] [Server thread/TRACE] [mcp/mcp]: Sending event FMLServerStoppingEvent to mod mcp
+[20:30:23] [Server thread/TRACE] [mcp/mcp]: Sent event FMLServerStoppingEvent to mod mcp
+[20:30:23] [Server thread/TRACE] [FML/FML]: Sending event FMLServerStoppingEvent to mod FML
+[20:30:23] [Server thread/TRACE] [FML/FML]: Sent event FMLServerStoppingEvent to mod FML
+[20:30:23] [Server thread/TRACE] [Forge/Forge]: Sending event FMLServerStoppingEvent to mod Forge
+[20:30:23] [Server thread/TRACE] [Forge/Forge]: Sent event FMLServerStoppingEvent to mod Forge
+[20:30:23] [Server thread/TRACE] [mineduino/mineduino]: Sending event FMLServerStoppingEvent to mod mineduino
+[20:30:23] [Server thread/INFO] [STDOUT/mineduino]: [cz.jacktech.mineduino.MineDuinoMod:serverStop:73]: server stopped
+[20:30:23] [Server thread/INFO] [STDOUT/mineduino]: [cz.jacktech.mineduino.serialiface.SerialManager:close:67]: SerialManager disconnecting
+[20:30:23] [Server thread/TRACE] [mineduino/mineduino]: Sent event FMLServerStoppingEvent to mod mineduino
+[20:30:23] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save MineDuino
+[20:30:23] [Server thread/INFO] [FML/]: Unloading dimension 0
+[20:30:23] [Server thread/INFO] [FML/]: Unloading dimension -1
+[20:30:23] [Server thread/INFO] [FML/]: Unloading dimension 1
+[20:30:23] [Server thread/DEBUG] [FML/]: Reverting to frozen data state.
+[20:30:23] [Server thread/INFO] [FML/]: Applying holder lookups
+[20:30:23] [Server thread/INFO] [FML/]: Holder lookups applied
+[20:30:23] [Server thread/TRACE] [mcp/mcp]: Sending event FMLServerStoppedEvent to mod mcp
+[20:30:23] [Server thread/TRACE] [mcp/mcp]: Sent event FMLServerStoppedEvent to mod mcp
+[20:30:23] [Server thread/TRACE] [FML/FML]: Sending event FMLServerStoppedEvent to mod FML
+[20:30:23] [Server thread/TRACE] [FML/FML]: Sent event FMLServerStoppedEvent to mod FML
+[20:30:23] [Server thread/TRACE] [Forge/Forge]: Sending event FMLServerStoppedEvent to mod Forge
+[20:30:23] [Server thread/TRACE] [Forge/Forge]: Sent event FMLServerStoppedEvent to mod Forge
+[20:30:23] [Server thread/TRACE] [mineduino/mineduino]: Sending event FMLServerStoppedEvent to mod mineduino
+[20:30:23] [Server thread/TRACE] [mineduino/mineduino]: Sent event FMLServerStoppedEvent to mod mineduino
+[20:30:26] [Client thread/INFO] [STDOUT/]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[20:30:26] [Client thread/INFO] [STDOUT/]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
+[20:30:26] [Client thread/INFO] [STDOUT/]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
+[20:30:26] [Client thread/INFO] [STDOUT/]: [paulscode.sound.SoundSystemLogger:message:69]: 

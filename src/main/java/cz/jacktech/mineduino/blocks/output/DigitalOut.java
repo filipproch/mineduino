@@ -12,7 +12,7 @@ import net.minecraft.world.World;
  */
 public class DigitalOut extends ABlock{
 
-    public static final String BLOCK_NAME = "digitalOUT";
+    public static final String BLOCK_NAME = "digitalOut";
 
     //private boolean isBlockPowered = false;
 
