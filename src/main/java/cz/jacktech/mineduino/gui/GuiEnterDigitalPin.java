@@ -1,8 +1,10 @@
 package cz.jacktech.mineduino.gui;
 
 import cz.jacktech.mineduino.MineDuinoMod;
+import cz.jacktech.mineduino.blocks.output.AnalogOut;
 import cz.jacktech.mineduino.entities.ETileEntity;
 import cz.jacktech.mineduino.entities.input.DigitalInTileEntity;
+import cz.jacktech.mineduino.entities.output.AnalogOutTileEntity;
 import cz.jacktech.mineduino.entities.output.DigitalOutTileEntity;
 import cz.jacktech.mineduino.serialiface.arduino.ArduinoDigitalPin;
 import cz.jacktech.mineduino.synch.ArduinoPinSyncMessage;
@@ -45,6 +47,8 @@ public class GuiEnterDigitalPin extends GuiScreen {
             arduinoPin = ((DigitalInTileEntity)tileEntity).getArduinoPinNumber();
         else if(tileEntity instanceof DigitalOutTileEntity)
             arduinoPin = ((DigitalOutTileEntity)tileEntity).getArduinoPinNumber();
+        else if(tileEntity instanceof AnalogOutTileEntity)
+            arduinoPin = ((AnalogOutTileEntity)tileEntity).getArduinoPinNumber();
 
     }
 

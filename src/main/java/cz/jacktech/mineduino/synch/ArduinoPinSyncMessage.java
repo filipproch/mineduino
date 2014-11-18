@@ -5,6 +5,7 @@ import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import cz.jacktech.mineduino.entities.ETileEntity;
 import cz.jacktech.mineduino.entities.input.DigitalInTileEntity;
+import cz.jacktech.mineduino.entities.output.AnalogOutTileEntity;
 import cz.jacktech.mineduino.entities.output.DigitalOutTileEntity;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.tileentity.TileEntity;
@@ -49,13 +50,17 @@ public class ArduinoPinSyncMessage implements IMessage {
         public IMessage onMessage(ArduinoPinSyncMessage m, MessageContext ctx) {
             TileEntity entity = ctx.getServerHandler().playerEntity.getEntityWorld().getTileEntity(m.x,m.y,m.z);
             if(entity instanceof DigitalInTileEntity){
-                DigitalInTileEntity outputTileEntity = (DigitalInTileEntity) entity;
-                outputTileEntity.setArduinoPinNumber(m.arduinoPin);
-                outputTileEntity.markForUpdate();
+                DigitalInTileEntity digitalInTileEntity = (DigitalInTileEntity) entity;
+                digitalInTileEntity.setArduinoPinNumber(m.arduinoPin);
+                digitalInTileEntity.markForUpdate();
             }else if(entity instanceof DigitalOutTileEntity){
-                DigitalOutTileEntity inputTileEntity = (DigitalOutTileEntity) entity;
-                inputTileEntity.setArduinoPinNumber(m.arduinoPin);
-                inputTileEntity.markForUpdate();
+                DigitalOutTileEntity digitalOutTileEntity = (DigitalOutTileEntity) entity;
+                digitalOutTileEntity.setArduinoPinNumber(m.arduinoPin);
+                digitalOutTileEntity.markForUpdate();
+            }else if(entity instanceof AnalogOutTileEntity){
+                AnalogOutTileEntity analogOutTileEntity = (AnalogOutTileEntity) entity;
+                analogOutTileEntity.setArduinoPinNumber(m.arduinoPin);
+                analogOutTileEntity.markForUpdate();
             }
             return null;
         }

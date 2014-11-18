@@ -59,4 +59,6 @@ public abstract class ETileEntity extends TileEntity{
         return getWorldObj().isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord);
     }
 
+    public int getPowerInput(){ return getWorldObj().getBlockPowerInput(xCoord, yCoord, zCoord);}
+
 }
