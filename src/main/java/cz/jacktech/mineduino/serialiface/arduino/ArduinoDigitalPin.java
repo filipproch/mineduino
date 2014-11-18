@@ -47,6 +47,7 @@ public class ArduinoDigitalPin extends ArduinoPin{
         if(pinType == PinMode.ANALOG_OUTPUT){
             try {
                 SerialManager.getInstance().writePin(this, value);
+                this.value = value;
             } catch (IncorrectPinModeException e) {
                 e.printStackTrace();
             }
@@ -59,6 +60,7 @@ public class ArduinoDigitalPin extends ArduinoPin{
 
     public void updateMode(PinMode pinMode){
         SerialManager.getInstance().setupPin(this, pinMode);
+        this.pinType = pinMode;
     }
 
     public void reset() {

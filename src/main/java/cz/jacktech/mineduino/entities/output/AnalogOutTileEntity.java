@@ -1,5 +1,6 @@
 package cz.jacktech.mineduino.entities.output;
 
+import cz.jacktech.mineduino.core.MineduinoLogger;
 import cz.jacktech.mineduino.entities.OutputTileEntity;
 import cz.jacktech.mineduino.gui.GuiHandler;
 import cz.jacktech.mineduino.serialiface.SerialManager;
