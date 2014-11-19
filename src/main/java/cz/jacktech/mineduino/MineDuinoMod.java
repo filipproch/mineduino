@@ -10,9 +10,11 @@ import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import cz.jacktech.mineduino.blocks.input.AnalogIn;
 import cz.jacktech.mineduino.blocks.output.AnalogOut;
 import cz.jacktech.mineduino.blocks.input.DigitalIn;
 import cz.jacktech.mineduino.blocks.output.DigitalOut;
+import cz.jacktech.mineduino.entities.input.AnalogInTileEntity;
 import cz.jacktech.mineduino.entities.input.DigitalInTileEntity;
 import cz.jacktech.mineduino.entities.output.AnalogOutTileEntity;
 import cz.jacktech.mineduino.entities.output.DigitalOutTileEntity;
@@ -36,6 +38,7 @@ public class MineDuinoMod {
     public static DigitalIn blockDigitalIn;
     public static DigitalOut blockDigitalOut;
     public static AnalogOut blockAnalogOut;
+    public static AnalogIn blockAnalogIn;
 
     public Config config;
 
@@ -53,9 +56,11 @@ public class MineDuinoMod {
         GameRegistry.registerBlock(blockDigitalIn = new DigitalIn(), DigitalIn.BLOCK_NAME);
         GameRegistry.registerBlock(blockDigitalOut = new DigitalOut(), DigitalOut.BLOCK_NAME);
         GameRegistry.registerBlock(blockAnalogOut = new AnalogOut(), AnalogOut.BLOCK_NAME);
+        GameRegistry.registerBlock(blockAnalogIn = new AnalogIn(), AnalogIn.BLOCK_NAME);
         GameRegistry.registerTileEntity(DigitalInTileEntity.class, DigitalInTileEntity.ENTITY_NAME);
         GameRegistry.registerTileEntity(DigitalOutTileEntity.class, DigitalOutTileEntity.ENTITY_NAME);
         GameRegistry.registerTileEntity(AnalogOutTileEntity.class, AnalogOutTileEntity.ENTITY_NAME);
+        GameRegistry.registerTileEntity(AnalogInTileEntity.class, AnalogInTileEntity.ENTITY_NAME);
 
         NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 

@@ -103,7 +103,7 @@ public class SerialManager {
                 updated = true;
                 if(analogPin){
                     ArduinoAnalogPin analogPin1 = (ArduinoAnalogPin) pin;
-                    //todo: set analog pin value
+                    analogPin1.updateValue(pinValue);
                 }else{
                     ArduinoDigitalPin digitalPin = (ArduinoDigitalPin) pin;
                     digitalPin.status = pinValue == 1;
@@ -155,6 +155,10 @@ public class SerialManager {
 
     public void resetPin(ArduinoPin arduinoPin) {
         sendCmd("/set/null/"+arduinoPin.pinNumber);
+    }
+
+    public void resetAnalogPin(ArduinoPin arduinoPin) {
+        sendCmd("/set/ainr/"+arduinoPin.pinNumber);
     }
 
     public void writePin(ArduinoDigitalPin pin, int value) throws IncorrectPinModeException {

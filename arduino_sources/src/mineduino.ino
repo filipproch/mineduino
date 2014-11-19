@@ -76,6 +76,8 @@ void readCommand(){
             setupPin(pin, A_OUT_PIN);
         }else if(what == "ain"){
             setupAPin(pin);
+        }else if(what == "ainr"){
+            resetAPin(pin);
         }else if(what == "null"){
             setupPin(pin, NOTHING);
             pinMode(pin, OUTPUT);
@@ -108,7 +110,13 @@ void setupPin(int pin, int type){
 
 void setupAPin(int pin){
     if(pin >= 0 && pin <= ANALOG_PINS){
-        analogPinsStatus[pin] = analogPinsStatus[pin] == ENABLED ? DISABLED : ENABLED;
+        analogPinsStatus[pin] = ENABLED;
+    }
+}
+
+void resetAPin(int pin){
+    if(pin >= 0 && pin <= ANALOG_PINS){
+        analogPinsStatus[pin] = DISABLED;
     }
 }
 

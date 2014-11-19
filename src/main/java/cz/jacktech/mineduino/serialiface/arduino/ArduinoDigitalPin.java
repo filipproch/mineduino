@@ -64,8 +64,7 @@ public class ArduinoDigitalPin extends ArduinoPin{
     }
 
     public void reset() {
-        updateMode(PinMode.OUTPUT);
-        disable();
+        SerialManager.getInstance().resetPin(this);
     }
 
     public void update(boolean enabled) {
