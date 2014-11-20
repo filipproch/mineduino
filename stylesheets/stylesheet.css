@@ -448,11 +448,14 @@ a:hover {
 }
 
 header {
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  border-bottom: solid 1px #dddddd;
+}
+
+header .wbackground{
+  background: #00979c;
   padding-top: 40px;
   padding-bottom: 40px;
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
-  background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
-  border-bottom: solid 1px #275da1;
 }
 
 header h1 {
@@ -481,6 +484,35 @@ header h2 {
   position: relative;
   width: 940px;
   margin: 0 auto;
+}
+
+header .menu{
+  font-family: Helvetica, Arial, serif;
+}
+
+header .menu ul{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header .menu li{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .menu li{
+  list-style-type: none;
+  display: inline;
+  margin: 0 20px;
+}
+
+header .menu li a{
+  display: inline-block;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: 40px;
 }
 
 #content-wrapper {
@@ -524,7 +556,7 @@ a.button {
   color: #fff;
   padding-left: 68px;
   padding-top: 22px;
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
 }
 a.button small {
   display: block;
@@ -537,12 +569,23 @@ header a.button {
   background: transparent url(../images/github-button.png) 0 0 no-repeat;
 }
 aside a.button {
-  width: 138px;
-  padding-left: 64px;
+  width: 180px;
+  padding: 10px 15px;
   display: block;
-  background: transparent url(../images/download-button.png) 0 0 no-repeat;
-  margin-bottom: 20px;
-  font-size: 21px;
+  background: #00979c;
+  margin-bottom: 18px;
+  font-size: 22px;
+  text-align: center;
+}
+
+aside a.disabled {
+    background: #dddddd !important;
+    color: #aaaaaa !important;
+}
+
+aside a.button small {
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 code, pre {
