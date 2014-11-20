@@ -38,20 +38,71 @@
 <div id="content-wrapper">
   <div class="inner clearfix">
     <section id="main-content">
-      <h3>
-        <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true">
-          <span class="octicon octicon-link"></span>
-        </a>
-        How to install...
-      </h3>
+      <h1>How to install...</h1>
 
-      <p>This page is being prepared.</p>
+      <h2>Requirements:</h2>
+
+      <p>
+        <ul>
+          <li>Minecraft 1.7.10 (no you can't use 1.8 or any previous version) - link</li>
+          <li>Minecraft Forge 1.7.10 (latest) - link</li>
+          <li>Arduino IDE (drivers, libs, etc.)</li>
+          <li>On Mac OS and Linux you can also install <a href="http://inotool.org">ino tool</a></li>
+        </ul>
+      </p>
+
+      <h2>Installation:</h2>
+
+      <p>
+        We expect that you have Minecraft and Minecraft Forge installed, so this won't be gathered in this tutorial.
+      </p>
+
+      <h3>preparing Arduino to communication with Minecraft</h3>
+
+      <p>
+        At first, you have to upload our Arduino sketch to your Arduino (UNO or Mega2560). It is very easy, here are the steps:
+        <h4>Using Arduino IDE (any OS)</h4>
+        <ol>
+          <li>Open Arduino IDE</li>
+          <li>Click <b>File > Open</b>, then go to folder where you extracted downloaded zip</li>
+          <li>In this folder, go to <i>arduino_sources/src/</i> where you find <b>"mineduino.ino"</b>, thats the file you have to open</li>
+          <li>Select your <b>Board</b> and <b>Serial port</b> in <b>Tools</b> menu</li>
+          <li>Finally, you can click the right facing arrow (Upload)</li>
+        </ol>
+        <h4>Using command line ino tool (Linux, OS X)</h4>
+        We are preparing this tutorial...
+      </p>
+
+      <h3>Mineduino mod installation</h3>
+
+      <p>
+        So you have your Arduino ready and connected to computer? Now you have to install our Forge mod. The latest version is already packed in the zip you downloaded.
+        <ol>
+          <li>Copy mod .jar file to <b>.minecraft/mods</b></li>
+          <li>Start Minecraft (do not open any world) and close it (our mod configuration file is generated)</li>
+          <li>Edit the configuration file, it's in <b>.minecraft/config/mineduino.cfg</b></li>
+          <li>You can now start Minecraft and control your Arduino with it!!!</li>
+        </ol>
+      </p>
+
+      <p>If you want to disconnect your Arduino, you have to first leave the world you are in, same before opening a world you must have your Arduino connected to your computer and setup correct Serial port in mod settings</p>
+
+      <h3>Happy building, controlling, learning, teaching or whatsoever...</h3>
+
+      <p><b>
+        We will not be responsible for any loss or damage whatsoever caused because of using this software (Mineduino) and its parts.
+      </b></p>
+
     </section>
 
     <aside id="sidebar">
       <a href="javascript:void(0)" class="button disabled">
         <small>Download</small>
         easy install pack
+      </a>
+      <a href="https://github.com/jacktech24/mineduino/releases/" class="button">
+        <small>Download</small>
+        latest mod releases
       </a>
       <a href="https://github.com/jacktech24/mineduino/zipball/master" class="button">
         <small>Download</small>
